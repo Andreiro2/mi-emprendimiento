@@ -1,7 +1,7 @@
 ---
 version: alpha
-name: "[Nombre del emprendimiento]"
-description: "[Design system de ... en una línea]"
+name: "[Joyas Kofran]"
+description: "[Design system de Joyas Kofran en una línea]"
 # Guía: evaluacion/guias/fase-2-specs/06-spec-de-diseno.md
 # Reemplaza TODOS los valores de ejemplo por los de tu paleta y tipografía
 # (docs/08-color-tipografia.md). Los HEX van siempre entre comillas.

@@ -1,4 +1,4 @@
-# Spec de diseño — [Nombre del emprendimiento]
+# Spec de diseño — Joyas Kofran
 
 > Guía: [Spec de diseño](../evaluacion/guias/fase-2-specs/06-spec-de-diseno.md)
 
@@ -7,7 +7,7 @@ La spec de diseño tiene dos partes:
 1. **[`DESIGN.md`](../DESIGN.md)** (en la raíz): tu design system, en el formato que Stitch importa.
 2. **Este documento:** tus pantallas, escritas como prompts listos para pegar en Stitch.
 
-**Wireframes en Whimsical:** [pega aquí el link]
+**Wireframes en Whimsical:** [[pega aquí el link](https://whimsical.com/franco-reyes2/34Fd4TELs1XmV6FNetkYD8)]
 
 > Guía de wireframes: [Wireframes](../evaluacion/guias/fase-2-specs/04-wireframes.md)
 

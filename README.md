@@ -31,8 +31,9 @@ Incluye landing, blog y prototipo de tienda online.
 
 ## Prototipo
 
-[Aquí va el link de tu proyecto de Stitch en la Fase 3]
+https://stitch.withgoogle.com/projects/16219822956842085906
 
 ## Uso de IA
 
-- **[Herramienta]:** para qué la usé y qué ajusté yo.
+- **ChatGPT 4.0:** para generar las ideas iniciales y la estructura del sitio.
+- **Stitch:** para crear el prototipo y los componentes visuales.
