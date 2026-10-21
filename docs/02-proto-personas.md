@@ -6,6 +6,8 @@
 
 <!-- Imagen: guárdala en docs/img/ y enlázala así: ![Avatar](img/nombre.png) -->
 
+<img width="1254" height="1254" alt="Retrato cálido en interior moderno" src="https://github.com/user-attachments/assets/ae9f7c74-d056-47a1-965f-0bd4a4fb79ac" />
+
 **Camila Rojas, 28 años**  
  **Ocupación:** analista de recursos humanos en una empresa mediana, vive en Viña del Mar y arrienda con una amiga. Ingreso mensual medio, con un presupuesto "de gusto" de unos \$25.000 a \$60.000 por compra.  
  **Frase:** *"Quiero algo lindo que no se me ponga negro en un mes, y que si algo sale mal, alguien me responda."*
