@@ -4,15 +4,32 @@
 
 ## Mapa de sitio
 
-<!-- Incluye landing, blog, tienda y las páginas obligatorias:
-contacto, preguntas frecuentes, términos, privacidad y 404. -->
-
 ```text
 Inicio (landing)
 ├── Tienda
+│   ├── Categoría: Anillos
+│   ├── Categoría: Cadenas y collares
+│   ├── Categoría: Aros
+│   ├── Categoría: Pulseras
+│   ├── Categoría: Dijes
+│   ├── Ficha de producto
+│   └── Carrito
 ├── Blog
-└── ...
+│   ├── Categoría: Cuidado y duración de la plata
+│   ├── Categoría: Cómo elegir bien
+│   ├── Categoría: Regalos e ideas
+│   └── Artículo
+├── Garantía y autenticidad
+├── Guía de tallas
+├── Despacho y cambios
+├── Contacto
+├── Preguntas frecuentes
+├── Términos y condiciones
+├── Política de privacidad
+└── 404
 ```
+
+Las categorías de la tienda y del blog no son páginas distintas: en el prototipo son la misma pantalla de tienda o de blog, filtrada.
 
 ## User flows
 
@@ -20,33 +37,65 @@ Inicio (landing)
 
 ### Flujo 1: compra
 
-Flujo 1: Compra (hasta el carrito)
+**Punto de entrada:** Camila ve una joya en una historia o publicación de Instagram, toca el enlace y aterriza directo en la ficha del producto, desde el celular y de noche. No pasa por el inicio.
+**Meta:** llegar al Carrito con la pieza y la talla elegidas.
 
-Punto de entrada: Camila ve una joya en una historia o publicación de Instagram, toca el enlace y aterriza directo en la ficha del producto, desde el celular y de noche. No pasa por el inicio.
-Meta: llegar al Carrito con la pieza y la talla elegidas.
-
-#	Pantalla	Acción de Camila	Decisión
-1	Ficha de producto	Mira fotos, precio, medidas y sello 925.	Si tiene dudas, sigue a 2, 3 o 4. Si no, pasa a 5.
-2	Garantía y autenticidad	Lee que es plata ley 925 y cómo funciona la garantía. Vuelve a la ficha.	Si queda tranquila, regresa al paso 1.
-3	Guía de tallas	Compara su medida con la tabla de largos y anillos. Vuelve a la ficha.	Si ya sabe su talla, regresa al paso 1.
-4	Despacho y cambios	Revisa costo y plazo para su zona y la política de cambio. Vuelve a la ficha.	Si el plazo no calza con su fecha, puede salir (fin del flujo).
-5	Ficha de producto	Elige variante (talla o largo).	Agregar al carrito → paso 6. Consultar por WhatsApp → salida a WhatsApp con el mensaje de la pieza. Seguir mirando → Tienda.
-6	Carrito	Ve la pieza y la talla elegidas.	Seguir comprando → Tienda. Continuar (fuera del alcance de este flujo).
+```text
+Instagram (historia o publicación de una joya)
+→ Ficha de producto
+→ [Mira fotos, precio, medidas y sello 925]
+◇ ¿Tiene dudas?
+   ├── Sí → [Elige qué resolver]
+   │     ├── Autenticidad o garantía → Garantía y autenticidad
+   │     │     → [Lee que es plata ley 925 y cómo funciona la garantía]
+   │     │     → [Vuelve a la ficha de producto]
+   │     ├── Talla → Guía de tallas
+   │     │     → [Compara su medida con la tabla de largos y anillos]
+   │     │     → [Vuelve a la ficha de producto]
+   │     └── Despacho o cambios → Despacho y cambios
+   │           → [Revisa costo y plazo para su zona y la política de cambio]
+   │           ◇ ¿El plazo calza con su fecha?
+   │              ├── Sí → [Vuelve a la ficha de producto]
+   │              └── No → Fin: sale del sitio
+   └── No → continúa
+→ [Elige variante (talla o largo)]
+◇ ¿Qué decide?
+   ├── Consultar por WhatsApp → WhatsApp (mensaje de la pieza ya escrito) → Fin
+   ├── Seguir mirando → [Clic en "Seguir mirando"] → Tienda
+   └── Agregar al carrito → [Clic en "Agregar al carrito"]
+→ Carrito
+→ [Ve la pieza y la talla elegidas]
+→ Fin: carrito con la pieza y la talla elegidas
+   (si quiere seguir comprando → Tienda; continuar al pago queda fuera del alcance de este flujo)
+```
 
 ### Flujo 2: contenido
 
-Flujo 2: Contenido (del blog a un producto o contacto)
+**Punto de entrada:** Camila busca en Google algo como "por qué se oscurece la plata 925" y aterriza directo en un artículo del blog sobre el cuidado de la plata. Esto responde a su frustración con joyas que cambian de color.
+**Meta:** llegar a una ficha de producto, al formulario de contacto o a WhatsApp.
 
-Punto de entrada: Camila busca en Google algo como "por qué se oscurece la plata 925" y aterriza directo en un artículo del blog sobre el cuidado de la plata. Esto responde a su frustración con joyas que cambian de color.
-Meta: llegar a una ficha de producto, al formulario de contacto o a WhatsApp.
-
-#	Pantalla	Acción de Camila	Decisión
-1	Artículo del blog	Lee los consejos de cuidado.	Sigue a 2 si quiere más confianza, o decide en el paso 3.
-2	Garantía y autenticidad	Entra desde un enlace del artículo y lee cómo se respalda la calidad. Vuelve al artículo.	Si queda convencida, regresa al paso 1 y avanza al 3.
-3	Artículo del blog (final)	Llega al cierre, donde ve piezas mencionadas y opciones de contacto.	Ver una pieza → paso 4. Quedar en contacto → paso 5. Preguntar → WhatsApp. Seguir leyendo → Blog.
-4	Ficha de producto	Revisa la pieza mencionada en el artículo.	Meta alcanzada. Desde aquí puede continuar al flujo de compra (paso 5 del Flujo 1).
-5	Contacto	Deja su correo o WhatsApp en el formulario para recibir novedades o consejos.	Meta alcanzada.
-6	Blog (listado)	Busca otro artículo.	Elige uno y vuelve al paso 1 con otro artículo.
+```text
+Google ("por qué se oscurece la plata 925")
+→ Artículo: "Por qué se oscurece la plata 925 y cómo limpiarla en casa sin dañarla"
+→ [Lee los consejos de cuidado]
+◇ ¿Quiere más confianza antes de decidir?
+   ├── Sí → [Clic en el enlace del artículo] → Garantía y autenticidad
+   │     → [Lee cómo se respalda la calidad]
+   │     → [Vuelve al artículo]
+   └── No → continúa
+→ [Llega al final del artículo y ve las piezas mencionadas y las opciones de contacto]
+◇ ¿Qué decide?
+   ├── Ver una pieza → [Clic en la pieza mencionada] → Ficha de producto
+   │     → [Revisa la pieza]
+   │     → Fin: meta alcanzada (puede continuar al Flujo 1 desde la elección de variante)
+   ├── Quedar en contacto → Contacto
+   │     → [Deja su correo o WhatsApp en el formulario para recibir novedades o consejos]
+   │     → Fin: lead captado
+   ├── Preguntar → WhatsApp → Fin
+   └── Seguir leyendo → Blog (listado)
+         → [Busca otro artículo y elige uno]
+         → vuelve al inicio del flujo con otro artículo
+```
 
 ## Categorías
 
@@ -54,42 +103,20 @@ Meta: llegar a una ficha de producto, al formulario de contacto o a WhatsApp.
 
 ### Categorías de productos
 
-1. Dos formas de agrupar tus productos
+Se agrupan por **tipo de pieza**. La agrupación por momento o intención de compra (para mí, todos los días; para regalar; para ocasiones especiales como cumpleaños, aniversarios y fechas del año) funciona como **filtro** de la tienda, no como categoría.
 
-Opción A: por tipo de pieza
-
-Anillos
-Cadenas y collares
-Aros
-Pulseras
-Dijes
-
-Opción B: por momento o intención de compra
-
-Para mí, todos los días (básicos)
-Para regalar
-Para ocasiones especiales (cumpleaños, aniversarios, fechas del año)
+| Categoría | Productos |
+|---|---|
+| Anillos | Argollas y anillos de plata ley 925 |
+| Cadenas y collares | Cadenas finas y collares de plata ley 925 |
+| Aros | Aros pequeños y argollas de plata ley 925 |
+| Pulseras | Pulseras de plata ley 925 |
+| Dijes | Dijes de plata ley 925 |
 
 ### Categorías del blog
 
-2. Tres categorías de blog
-
-Todas parten de una necesidad de Camila y terminan enlazando a una ficha de producto, como en el flujo de contenido que definimos.
-
-Categoría 1: Cuidado y duración de la plata
-
-Artículo: "Por qué se oscurece la plata 925 y cómo limpiarla en casa sin dañarla".
-Necesidad que atiende: su miedo a que la joya cambie de color a las pocas semanas y a no saber cómo cuidarla.
-Producto enlazado: cadenas y collares finos de uso diario, que son los que más contacto tienen con la piel.
-
-Categoría 2: Cómo elegir bien
-
-Artículo: "Cómo medir tu dedo en casa y no equivocarte con la talla de un anillo".
-Necesidad que atiende: que no quiere errar la talla al comprar online y no poder cambiarla.
-Producto enlazado: anillos, con enlace a la guía de tallas y a la política de cambio.
-
-Categoría 3: Regalos e ideas
-
-Artículo: "Regalos de plata 925 según tu presupuesto: ideas desde $20.000 hasta $60.000" (ajusta los tramos a tus precios reales).
-Necesidad que atiende: querer quedar bien con un regalo que parezca pensado, sin pasarse del presupuesto ni improvisar a último minuto.
-Producto enlazado: aros y dijes en cada tramo de precio. Con la temporada de Navidad cerca, es un buen artículo para publicar pronto.
+| Categoría | Idea de artículo | Necesidad o motivación de la proto-persona | Producto relacionado |
+|---|---|---|---|
+| Cuidado y duración de la plata | "Por qué se oscurece la plata 925 y cómo limpiarla en casa sin dañarla" | Su miedo a que la joya cambie de color a las pocas semanas y a no saber cómo cuidarla | Cadenas y collares finos de uso diario, que son los que más contacto tienen con la piel |
+| Cómo elegir bien | "Cómo medir tu dedo en casa y no equivocarte con la talla de un anillo" | No quiere errar la talla al comprar online y no poder cambiarla | Anillos, con enlace a la guía de tallas y a la política de cambio |
+| Regalos e ideas | "Regalos de plata 925 según tu presupuesto: ideas desde $20.000 hasta $60.000" | Quiere quedar bien con un regalo que parezca pensado, sin pasarse del presupuesto ni improvisar a último minuto | Aros y dijes en cada tramo de precio |
