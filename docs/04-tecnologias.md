@@ -1,34 +1,64 @@
 # Tecnologías del proyecto — Joyas Kofran
 
-Restricciones
-Sin JavaScript no hay lógica. No se pueden hacer cálculos, recordar nada entre visitas ni reaccionar a lo que escribe el usuario.
-GitHub Pages es hosting estático. No hay servidor ni base de datos, así que nada se guarda: ni comentarios, ni favoritos, ni pedidos.
-El repositorio es público en el plan gratuito. Cualquier clave o dato que pongas en el código lo puede ver cualquiera.
-Política de uso: GitHub Pages no está pensado ni permitido para operar un negocio online o una tienda de comercio electrónico, ni sitios dirigidos principalmente a facilitar transacciones comerciales, y tampoco debe usarse para datos sensibles como números de tarjeta. Si el sitio es un prototipo académico, no hay problema. Si quieres vender de verdad desde ahí, necesitas cambiar de hosting o de plataforma. 
-github
-Límites de tamaño: el sitio publicado no puede superar 1 GB y hay un límite blando de 100 GB de transferencia al mes. Las fotos de joyas deben ir optimizadas. 
-github
-Filtros solo con CSS: dependen de selectores modernos como :has(), que no funcionan en navegadores antiguos.
-Mantenimiento manual: cada producto se edita a mano en el código. Con un catálogo grande se vuelve inmanejable.
-Los formularios dependen de terceros: el envío y el almacenamiento de datos lo hace otro servicio, así que necesitas aviso de privacidad y consentimiento.
- Funcionan de verdad solo con HTML y CSS
-Funcionalidad	Cómo funciona hoy	Integración en versión real (y para qué)
-Filtrar (solo catálogo chico)	Botones de opción + CSS que muestran u ocultan piezas por categoría o precio.	Filtros con JavaScript, para combinar criterios y soportar un catálogo que crece.
-Compartir	Enlaces fijos a WhatsApp, Facebook, X y correo con la URL de cada página ya escrita. Instagram no tiene enlace web de compartir.	API nativa de compartir del celular (requiere JavaScript), para abrir el menú de apps del teléfono.
-2. Guía de talla	Página estática con tabla de largos de cadena y diámetros de anillo.	Una calculadora (JavaScript), para que la usuaria mida su dedo y obtenga la talla sin interpretar tablas.
-3. Autenticidad y garantía	Páginas fijas con política de garantía y cambio, foto del sello 925 y certificado en PDF descargable.	Código único por pieza con verificación en una base de datos, para comprobar cada joya individual.
-5. WhatsApp con contexto	Un enlace wa.me por producto con el mensaje ya escrito ("Hola, me interesa [pieza]").	WhatsApp Business API, solo si necesitas respuestas automáticas o varios agentes.
-8. Del blog a los productos	Enlaces internos entre artículos y fichas. Los consejos de cuidado van en una página que enlazas con un QR en la tarjeta del paquete.	Correo automático postventa (Brevo o Mailchimp), para enviar el cuidado de la plata sin depender del QR.
- Funcionan parcialmente o con un servicio externo
-Funcionalidad	Qué sí funciona	Qué falta / integración real
-Captar leads	Un formulario HTML cuyo envío lo recibe Formspree, Google Forms, Brevo o Mailchimp.	Protección anti-spam y consentimiento. La lista de contactos vive en el servicio externo, no en tu sitio.
-Seleccionar (variante o talla)	Los botones de opción permiten elegir, pero la elección no viaja a ninguna parte.	Un carrito o un formulario con JavaScript. Mientras tanto, un enlace de WhatsApp por cada variante.
-4. Despacho y seguimiento	Tabla estática de costos y plazos por zona o comuna, y enlaces a las páginas de seguimiento de Starken, Chilexpress o Correos de Chile.	Cálculo por comuna y seguimiento dentro del sitio requieren API del courier y un servidor, o una plataforma de tienda que ya lo incluya.
-6. Regalos por ocasión y presupuesto	Páginas curadas a mano ("Regalos hasta $30.000", "Para mamá"). El mensaje de regalo se pide por WhatsApp.	Un asistente interactivo y mensaje de regalo dentro del pedido requieren JavaScript y un sistema de pedidos.
-7. Compra sin cuenta con medios de pago	Un link de pago por producto (los ofrecen servicios como Mercado Pago, Flow o Khipu; verifica disponibilidad y comisiones) y transferencia con comprobante por WhatsApp.	No hay carrito, stock ni confirmación automática. Una versión real necesita una plataforma de e-commerce (Shopify, Tiendanube, WooCommerce), y eso además resuelve la restricción de GitHub Pages.
- Solo prototipo visual
-Funcionalidad	Por qué no funciona	Integración en versión real (y para qué)
-Buscar	Sin JavaScript no se puede buscar dentro del sitio. Un formulario hacia Google con site: funciona, pero saca a la usuaria de tu página.	Pagefind o Lunr (JavaScript) para buscar en un sitio estático, o el buscador integrado de la plataforma de tienda.
-Comentar	No hay dónde guardar lo que escriben.	Reseñas de la plataforma de tienda. Giscus o Disqus exigen cuenta y no calzan con Camila. Alternativa manual: formulario de reseña que tú revisas y pegas en el HTML.
-1. Guardar favoritos	Requiere recordar estado entre visitas.	localStorage con JavaScript para guardar en el mismo dispositivo, o cuentas de usuario (Firebase o Supabase) para recuperarlos desde otro.
-Resumen y siguiente paso.
+> Guía: [Tecnologías del proyecto](../evaluacion/guias/fase-1-requerimientos/04-tecnologias.md)
+
+## Stack
+
+| Área | Herramienta | Para qué la uso |
+|---|---|---|
+| Construcción | HTML + CSS | Maquetar la landing, el blog y la tienda de Joyas Kofran sin frameworks ni gestor de contenido |
+| Versionado | Git y GitHub | Guardar el avance con commits y tener el proyecto y la documentación en la nube |
+| Publicación | GitHub Pages | Publicar el sitio gratis con una URL pública, como prototipo académico |
+| Diseño | Whimsical | Armar el moodboard, calcar los componentes y hacer los wireframes |
+| Diseño | Google Stitch | Generar el prototipo referencial en alta fidelidad (desktop y mobile) a partir de mis specs |
+| IA | ChatGPT y Claude | Generar ideas iniciales, ordenar la estructura del sitio y revisar mis documentos |
+| Editor | Visual Studio Code | Escribir, organizar y editar el código HTML y CSS del sitioweb |
+
+## Qué es funcional y qué es prototipo
+
+Los estados son tres: **Funcional** (funciona de verdad solo con HTML y CSS), **Parcial** (funciona con ayuda de un servicio externo o solo en parte) y **Prototipo visual** (se ve, pero no procesa ni guarda datos).
+
+| Funcionalidad | Estado en esta versión |
+|---|---|
+| Navegar los artículos por categoría y pasar del blog a las fichas de producto | Funcional (enlaces internos entre páginas) |
+| Filtrar productos por categoría o precio | Funcional solo con catálogo chico (botones de opción + CSS; requiere navegadores modernos con `:has()`) |
+| Ver el detalle de un producto | Funcional (ficha estática) |
+| Compartir un artículo | Funcional (enlaces fijos a WhatsApp, Facebook, X y correo; Instagram no tiene enlace web de compartir) |
+| Guía de talla (largo de cadena, diámetro de anillo, peso) | Funcional (página estática con tablas) |
+| Autenticidad 925 y garantía | Funcional (páginas fijas con política de garantía y cambio, foto del sello y certificado en PDF descargable) |
+| Consultar por WhatsApp sobre una pieza | Funcional (enlace `wa.me` por producto con el mensaje ya escrito) |
+| Consejos de cuidado de la plata | Funcional (página enlazada con un QR en la tarjeta del paquete) |
+| Captar leads | Parcial (formulario HTML cuyo envío recibe Formspree, Google Forms, Brevo o Mailchimp; la lista vive en el servicio externo) |
+| Seleccionar variante o talla | Parcial (los botones permiten elegir, pero la elección no viaja a ninguna parte) |
+| Despacho y seguimiento | Parcial (tabla estática de costos y plazos por comuna y enlaces a Starken, Chilexpress o Correos de Chile) |
+| Regalos por ocasión y presupuesto | Parcial (páginas curadas a mano como "Regalos hasta $30.000" o "Para mamá"; el mensaje de regalo se pide por WhatsApp) |
+| Compra sin cuenta con medios de pago | Parcial (link de pago por producto y transferencia con comprobante por WhatsApp; sin carrito, stock ni confirmación automática) |
+| Agregar al carrito | Prototipo visual |
+| Buscar productos | Prototipo visual (sin JavaScript no se puede buscar dentro del sitio) |
+| Comentar un artículo | Prototipo visual (no hay dónde guardar lo que escriben) |
+| Guardar favoritos | Prototipo visual (requiere recordar estado entre visitas) |
+
+## Integraciones para una versión real
+
+- **Plataforma de e-commerce (Shopify, Tiendanube o WooCommerce):** carrito, stock, pagos con confirmación automática, seguimiento de pedidos y reseñas. Además resuelve la restricción de GitHub Pages, que no permite operar una tienda.
+- **Pasarela de pago (Webpay, Mercado Pago, Flow o Khipu):** cobrar con tarjeta o transferencia sin salir del sitio (verificar disponibilidad y comisiones).
+- **JavaScript:** filtros combinables para un catálogo que crece, calculadora de talla, API nativa de compartir del celular y favoritos con `localStorage`.
+- **Buscador (Pagefind o Lunr):** buscar dentro de un sitio estático, o el buscador integrado de la plataforma de tienda.
+- **Cuentas de usuario (Firebase o Supabase):** recuperar favoritos desde otro dispositivo.
+- **API del courier y servidor:** calcular el despacho por comuna y mostrar el seguimiento dentro del sitio, o una plataforma de tienda que ya lo incluya.
+- **Código único por pieza con base de datos:** verificar la autenticidad de cada joya individual.
+- **WhatsApp Business API:** respuestas automáticas o varios agentes, solo si se necesita.
+- **Email marketing (Brevo o Mailchimp):** guardar los contactos y enviar automáticamente el cuidado de la plata después de comprar, sin depender del QR.
+- **Reseñas:** las de la plataforma de tienda, o un formulario de reseña que reviso y publico a mano. Giscus y Disqus exigen cuenta y no calzan con la proto-persona.
+
+## Restricciones
+
+- **Plazo:** 29 de septiembre al 14 de octubre de 2026 (Fase 1 el 5 de octubre, Fase 2 el 12 y Fase 3 el 14).
+- **Marca:** no hay manual de marca previo; la identidad visual se define en la Fase 2.
+- **Dispositivos:** el sitio debe funcionar en celular y escritorio, priorizando el celular porque Camila navega casi solo desde el teléfono.
+- **Sin lógica ni datos:** sin JavaScript no hay cálculos, memoria entre visitas ni reacción a lo que escribe el usuario, y GitHub Pages es hosting estático: no hay servidor ni base de datos, así que no se guardan comentarios, favoritos ni pedidos.
+- **Repositorio público:** cualquier clave o dato que se ponga en el código lo puede ver cualquiera.
+- **Política de uso de GitHub Pages:** no está permitido para operar un negocio online ni para datos sensibles como números de tarjeta. Como prototipo académico no hay problema; para vender de verdad hay que cambiar de hosting o de plataforma.
+- **Tamaño:** el sitio publicado no puede superar 1 GB y hay un límite blando de 100 GB de transferencia al mes, por lo que las fotos de las joyas deben ir optimizadas.
+- **Mantenimiento manual:** cada producto se edita a mano en el código, lo que se vuelve inmanejable con un catálogo grande.
+- **Formularios de terceros:** el envío y almacenamiento de datos lo hace otro servicio, por lo que se necesita aviso de privacidad y consentimiento.
