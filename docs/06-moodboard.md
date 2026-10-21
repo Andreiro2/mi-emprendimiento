@@ -2,9 +2,10 @@
 
 > Guía: [Moodboard](../evaluacion/guias/fase-2-specs/02-moodboard.md)
 
-**Tablero en Whimsical:** [Joyas Kofran - Moodboard](https://whimsical.com/franco-reyes2/joyas-kofran-moodboard-TMkVzJBgYPHsQj3smck4aV)
+**Tablero en Whimsical:** [Joyas Kofran - Moodboard] https://whimsical.com/franco-reyes2/Gri5it138B2qipavH1kLM1
 
-![Moodboard](img/moodboard.png)
+<img width="716" height="910" alt="moadboard" src="https://github.com/user-attachments/assets/8f2a4c36-4d39-4273-bc79-febb331a4aab" />
+
 
 ## Palabras clave
 
