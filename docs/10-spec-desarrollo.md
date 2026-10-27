@@ -2,7 +2,7 @@
 
 > Guía: [Spec de desarrollo](../evaluacion/guias/fase-2-specs/07-spec-de-desarrollo.md)
 
-## Insumos y prompt para el asistente
+## Insumos y prompt para el asistente 
 
 ```text
 Lee DESIGN.md, docs/09-spec-diseno.md y docs/10-spec-desarrollo.md.
