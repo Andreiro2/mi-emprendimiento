@@ -4,7 +4,7 @@
 
 **Tablero en Whimsical:** [Joyas Kofran - Componentes](https://whimsical.com/franco-reyes2/34Fd4TELs1XmV6FNetkYD8)
 
-![Componentes de Joyas Kofran: a la izquierda las capturas de referencia del tablero de Whimsical y a la derecha los 10 componentes calcados en grises](img/componentes.png)
+![Componentes de Joyas Kofran: a la izquierda las capturas de referencia del tablero de Whimsical y a la derecha los 10 componentes calcados en grises](img/componentes.png) 
 
 Se calcaron 10 componentes que cubren la landing, el blog y la tienda. El tablero de Whimsical reúne las capturas de referencia; los calcos están en grises y sin fotos, con solo la estructura (qué elementos tiene cada componente, en qué orden y cómo se distribuyen). Buscador y filtros, product card, ficha y carrito se calcaron desde MisJoyas sin captura en el tablero. Los calcos sueltos están en [`img/componentes/`](img/componentes/) y su fuente en [`img/componentes-fuente.html`](img/componentes-fuente.html).
 
