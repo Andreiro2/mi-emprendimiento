@@ -4,9 +4,11 @@
 
 **Tablero en Whimsical:** [Joyas Kofran - Componentes](https://whimsical.com/franco-reyes2/34Fd4TELs1XmV6FNetkYD8)
 
-![Tablero de componentes en Whimsical: blog, landing, tienda, reseñas, info para fidelizar y footer](img/componentes.png)
+![Tablero de componentes en Whimsical: a la izquierda las capturas de referencia y a la derecha los 10 componentes calcados en grises](img/componentes.png)
 
-Se calcaron 9 componentes que cubren la landing, el blog y la tienda. Cada uno pasó al design system con un nombre de token (`DESIGN.md`) y se usa en las pantallas de `09-spec-diseno.md`.
+Se calcaron 10 componentes que cubren la landing, el blog y la tienda. En el tablero, cada calco está al lado de su captura de referencia, en grises y sin fotos: solo la estructura (qué elementos tiene, en qué orden y cómo se distribuyen). Buscador y filtros, product card, ficha y carrito se calcaron desde MisJoyas sin pegar la captura. Los calcos sueltos están en [`img/componentes/`](img/componentes/) y su fuente en [`img/componentes-fuente.html`](img/componentes-fuente.html).
+
+Cada componente pasó al design system con un nombre de token (`DESIGN.md`) y se usa en las pantallas de `09-spec-diseno.md`.
 
 | Componente | Referencia | Qué contiene | Qué necesidad resuelve |
 |---|---|---|---|

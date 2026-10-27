@@ -63,7 +63,8 @@ chilenos con formato $29.990, nunca USD. Tono cercano y claro, en español de
 Chile, con tuteo. Usa textos reales, nunca marcadores entre corchetes como
 [Título] o [$XX.XXX]. No menciones oro, platino, diamantes, certificados GIA,
 "atelier", "alta joyería" ni "inversión". No inventes años de trayectoria,
-cifras de clientas, fundadores, plazos de garantía ni políticas de cambio.
+cifras de clientas, fundadores ni políticas de cambio. La garantía es de 6
+meses: no uses otro plazo.
 Navbar azul con exactamente: logo "Joyas Kofran", Tienda, Blog, Contacto,
 buscador y carrito. Footer azul idéntico en todas las pantallas, con solo
 Webpay y transferencia. Un único WhatsApp: +56 9 XXXX XXXX.

@@ -358,7 +358,7 @@ Fondo azul `primary` en todas las pantallas. Logo "Joyas Kofran" a la izquierda;
 
 ### Barra de confianza (`trust-bar`)
 
-Franja sobre el navbar con tres mensajes: "Plata ley 925 certificada", "Joyas con garantía" y "Despacho a todo Chile". En mobile rota un mensaje a la vez.
+Franja sobre el navbar con tres mensajes: "Plata ley 925 certificada", "Garantía de 6 meses" y "Despacho a todo Chile". En mobile rota un mensaje a la vez.
 
 ### Botones (`button-primary`, `button-secondary`, `button-whatsapp`)
 
@@ -394,7 +394,7 @@ Foto de la pieza y nombre de la categoría en `headline-md`. Toda la tarjeta es 
 
 ### Ficha de producto
 
-Galería (foto principal + 3 miniaturas, al menos una en uso real), nombre (h1), `tag-925`, precio, selector de talla o largo, enlace "Ver guía de tallas", tabla de medidas (largo, diámetro, peso), bloque de autenticidad (foto del sello 925 y texto de garantía), costo y plazo de despacho, `button-primary` "Agregar al carrito" y `button-whatsapp`.
+Galería (foto principal + 3 miniaturas, al menos una en uso real), nombre (h1), `tag-925`, precio, selector de talla o largo, enlace "Ver guía de tallas", tabla de medidas (largo, diámetro, peso), bloque de autenticidad (foto del sello 925 y "Garantía de 6 meses"), costo y plazo de despacho, `button-primary` "Agregar al carrito" y `button-whatsapp`.
 
 - El precio, el selector de talla y "Agregar al carrito" se ven sin hacer scroll en desktop.
 - Las medidas siempre en milímetros, centímetros y gramos.
@@ -413,7 +413,7 @@ Cinco estrellas en bronce, comentario entre comillas, nombre y comuna de la clie
 
 ### Beneficios (`benefit-item`)
 
-Fila de 4 ítems con ícono y texto corto: "Plata ley 925 certificada", "Joyas con garantía", "Despacho a todo Chile con seguimiento" y "Atención por WhatsApp".
+Fila de 4 ítems con ícono y texto corto: "Plata ley 925 certificada", "Garantía de 6 meses", "Despacho a todo Chile con seguimiento" y "Atención por WhatsApp".
 
 ### Formulario de leads (`lead-form`)
 
@@ -450,7 +450,7 @@ Enlaces a Tienda, Blog, Contacto, Preguntas frecuentes, Garantía y autenticidad
 - No usar el gris plata como color de texto ni el bronce como fondo de botones principales.
 - No poner más de un `button-primary` por sección.
 - No usar ventanas emergentes al entrar al sitio ni cuentas regresivas.
-- No inventar plazos de garantía, días de cambio ni políticas que no estén en el brief.
+- La garantía es de 6 meses (dato confirmado por el dueño). No escribir otro plazo ni inventar días de cambio o políticas que no estén en el brief.
 - No agregar medios de pago distintos de Webpay y transferencia.
 - No cambiar el navbar ni el footer entre pantallas.
 - No usar fotos con interfaces, capturas de otros sitios ni texto encima.

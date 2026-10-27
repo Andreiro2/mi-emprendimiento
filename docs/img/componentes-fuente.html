@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<!-- Fuente de los componentes calcados (07). Cada .comp se exporta como PNG y se pega en el tablero de Whimsical al lado de su referencia. Solo estructura, en grises. -->
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;background:#fff;color:#333;padding:20px;font-size:13px}
+.comp{background:#fff;border:2px solid #555;margin:0 0 30px;display:inline-block;vertical-align:top}
+.title{font-weight:700;font-size:15px;background:#555;color:#fff;padding:6px 12px}
+.ref{font-weight:400;font-size:11px;opacity:.85;margin-left:6px}
+.pad{padding:12px}
+.box{border:1.5px solid #888;background:#f3f3f3;padding:8px;margin:6px 0}
+.dark{background:#c4c4c4}
+.img{background:#d9d9d9 repeating-linear-gradient(45deg,transparent 0 10px,#cfcfcf 10px 20px);border:1.5px solid #999;display:flex;align-items:center;justify-content:center;color:#666;font-size:11px;text-align:center}
+.row{display:flex;gap:8px;align-items:stretch}.col{flex:1}
+.btn{display:inline-block;border:1.5px solid #333;border-radius:20px;padding:4px 12px;font-weight:600;font-size:12px;margin:4px 4px 0 0;background:#fff}
+.btn.p{background:#555;color:#fff}
+.chip{display:inline-block;border:1px solid #777;border-radius:14px;padding:2px 9px;font-size:11px;margin:2px}
+.chip.a{background:#555;color:#fff}
+.input{border:1.5px solid #888;background:#fff;padding:5px 8px;color:#888;font-size:12px;border-radius:4px}
+.line{height:7px;background:#cfcfcf;border-radius:4px;margin:4px 0}
+.small{font-size:11px;color:#666}
+.ic{display:inline-flex;width:22px;height:22px;border-radius:50%;border:1.5px solid #777;background:#e6e6e6;align-items:center;justify-content:center;font-size:10px;color:#555;margin-right:4px;vertical-align:middle}
+h2{font-size:16px;margin:2px 0 6px}h3{font-size:13px;margin:4px 0 2px}
+table{border-collapse:collapse;width:100%;font-size:11px}td{border:1px solid #aaa;padding:4px}
+</style></head><body>
+
+<div class="comp" id="c01" style="width:760px">
+ <div class="title">01 · Landing page <span class="ref">ref. Carat (plantilla)</span></div>
+ <div class="pad">
+  <div class="row box"><div class="col"><span class="small">Colección destacada</span><h2>Título de la colección</h2><div class="line" style="width:80%"></div><div class="line" style="width:60%"></div><span class="btn p">Botón "Descubrir"</span></div><div class="img" style="width:300px;height:140px">Foto modelo con joya</div></div>
+  <div class="box row small"><div class="col"><span class="ic">▭</span>Envío</div><div class="col"><span class="ic">↺</span>Devoluciones</div><div class="col"><span class="ic">?</span>Soporte</div><div class="col"><span class="ic">✓</span>Pago seguro</div></div>
+  <div class="box"><h3>Categorías</h3><div class="row"><div class="col"><div class="img" style="height:60px">foto</div><span class="small">Anillos</span></div><div class="col"><div class="img" style="height:60px">foto</div><span class="small">Collares</span></div><div class="col"><div class="img" style="height:60px">foto</div><span class="small">Matrimonio</span></div></div></div>
+  <div class="box"><h3>Productos destacados</h3><div class="row"><div class="col"><div class="img" style="height:50px">joya</div><div class="line"></div></div><div class="col"><div class="img" style="height:50px">joya</div><div class="line"></div></div><div class="col"><div class="img" style="height:50px">joya</div><div class="line"></div></div><div class="col"><div class="img" style="height:50px">joya</div><div class="line"></div></div></div></div>
+ </div>
+</div>
+
+<div class="comp" id="c02" style="width:760px">
+ <div class="title">02 · Tienda: cabecera y navegación <span class="ref">ref. MisJoyas</span></div>
+ <div class="pad">
+  <div class="box dark row small" style="justify-content:space-around"><span>Promesa 1: plata 925 certificada</span><span>Promesa 2: envío gratis sobre $X</span><span>Promesa 3</span></div>
+  <div class="box row" style="align-items:center"><b style="width:110px">LOGO</b><div class="input col">🔍 Buscar por nombre o tipo de pieza…</div><span class="ic">👤</span><span class="ic">🛒</span></div>
+  <div class="box small"><span class="chip">Categoría 1 ▾</span><span class="chip">Categoría 2 ▾</span><span class="chip">Colecciones ▾</span><span class="chip">Insumos ▾</span><span class="chip">Ofertas ▾</span></div>
+  <div class="img" style="height:120px;position:relative">Banner de nueva colección (foto + título)<span class="btn p" style="position:absolute;right:14px;bottom:10px">Botón "Encuéntralas aquí"</span></div>
+ </div>
+</div>
+
+<div class="comp" id="c03" style="width:560px">
+ <div class="title">03 · Buscador y filtros <span class="ref">ref. MisJoyas</span></div>
+ <div class="pad">
+  <div class="input">🔍 Buscar por nombre o tipo de pieza…</div>
+  <div style="margin:8px 0"><span class="chip a">Todas</span><span class="chip">Anillos</span><span class="chip">Cadenas y collares</span><span class="chip">Aros</span><span class="chip">Pulseras</span><span class="chip">Dijes</span></div>
+  <div class="row">
+   <div class="box col"><b>Precio</b><br>☐ Tramo 1<br>☐ Tramo 2<br>☐ Tramo 3<br>☐ Tramo 4</div>
+   <div class="box col"><b>Ocasión</b><br>☐ Para mí<br>☐ Para regalar<br>☐ Ocasiones especiales</div>
+   <div class="box col"><b>Ordenar por</b><br><div class="input" style="margin-top:4px">Más vendidos ▾</div><br><span class="small">N resultados</span></div>
+  </div>
+ </div>
+</div>
+
+<div class="comp" id="c04" style="width:240px">
+ <div class="title">04 · Product card <span class="ref">ref. MisJoyas</span></div>
+ <div class="pad">
+  <div class="img" style="height:170px;position:relative">Foto de la joya<span class="chip" style="position:absolute;left:6px;top:6px;background:#fff">Etiqueta</span></div>
+  <h3>Nombre de la pieza</h3>
+  <span class="small">Tipo de pieza</span>
+  <div><b>$ Precio</b></div>
+  <span class="btn" style="width:100%;text-align:center">Ver producto</span>
+ </div>
+</div>
+
+<div class="comp" id="c05" style="width:760px">
+ <div class="title">05 · Ficha de producto con talla y autenticidad <span class="ref">ref. MisJoyas</span></div>
+ <div class="pad row">
+  <div style="width:300px"><div class="img" style="height:240px">Foto principal</div><div class="row" style="margin-top:6px"><div class="img col" style="height:50px">mini</div><div class="img col" style="height:50px">mini</div><div class="img col" style="height:50px">en uso</div></div></div>
+  <div class="col">
+   <h2>Nombre de la pieza</h2><span class="chip">Sello 925</span>
+   <div><b style="font-size:16px">$ Precio</b></div>
+   <div style="margin-top:6px"><b>Talla / largo</b> <span class="small">· <u>Guía de tallas</u></span><br><span class="chip">10</span><span class="chip a">12</span><span class="chip">14</span><span class="chip">16</span></div>
+   <table style="margin-top:6px"><tr><td>Largo</td><td>— cm</td></tr><tr><td>Diámetro</td><td>— mm</td></tr><tr><td>Peso</td><td>— g</td></tr></table>
+   <div class="box row" style="align-items:center"><div class="img" style="width:60px;height:44px">punzón</div><div class="col small">Autenticidad: foto del sello 925<br>Texto de garantía</div></div>
+   <span class="btn p">Agregar al carrito</span><span class="btn">💬 Consultar por WhatsApp</span>
+  </div>
+ </div>
+</div>
+
+<div class="comp" id="c06" style="width:640px">
+ <div class="title">06 · Resumen del carrito con despacho <span class="ref">ref. MisJoyas</span></div>
+ <div class="pad row">
+  <div class="col">
+   <div class="box row" style="align-items:center"><div class="img" style="width:60px;height:60px">foto</div><div class="col"><h3>Nombre de la pieza</h3><span class="small">Talla · Cantidad [− 1 +]</span></div><b>$ Precio</b><span class="small" style="margin-left:6px">🗑 Eliminar</span></div>
+   <div class="box"><b>Despacho</b><br><div class="input" style="margin-top:4px">Comuna ▾</div><span class="small">Costo $— · llega en — días hábiles</span></div>
+  </div>
+  <div class="box" style="width:220px">
+   <b>Resumen</b><table style="margin-top:4px"><tr><td>Subtotal</td><td>$—</td></tr><tr><td>Despacho</td><td>$—</td></tr><tr><td><b>Total</b></td><td><b>$—</b></td></tr></table>
+   <span class="btn p" style="width:100%;text-align:center">Comprar sin crear cuenta</span>
+   <div class="small" style="margin-top:6px">Medios de pago: [ ▭ ] [ ▭ ]</div>
+   <span class="btn" style="width:100%;text-align:center">💬 WhatsApp</span>
+  </div>
+ </div>
+</div>
+
+<div class="comp" id="c07" style="width:700px">
+ <div class="title">07 · Reseñas <span class="ref">ref. MisJoyas</span></div>
+ <div class="pad">
+  <h2 style="text-align:center">Lo que dicen nuestras clientas</h2>
+  <div class="small" style="text-align:center">★★★★★ Puntaje promedio · N reseñas verificadas</div>
+  <div class="row" style="margin-top:8px">
+   <div class="col"><div class="img" style="height:100px">foto real de clienta</div><div class="small">★★★★★</div><div class="line"></div><div class="line" style="width:70%"></div></div>
+   <div class="col"><div class="img" style="height:100px">foto real de clienta</div><div class="small">★★★★★</div><div class="line"></div><div class="line" style="width:70%"></div></div>
+   <div class="col"><div class="img" style="height:100px">foto real de clienta</div><div class="small">★★★★★</div><div class="line"></div><div class="line" style="width:70%"></div></div>
+   <div class="col"><div class="img" style="height:100px">foto real de clienta</div><div class="small">★★★★★</div><div class="line"></div><div class="line" style="width:70%"></div></div>
+  </div>
+ </div>
+</div>
+
+<div class="comp" id="c08" style="width:640px">
+ <div class="title">08 · Blog: card de artículo y categorías <span class="ref">ref. Premium Joyas</span></div>
+ <div class="pad">
+  <div class="box row" style="align-items:center"><b style="width:80px">LOGO</b><span class="col small">Menú ▾ · Menú ▾ · Menú ▾ · Blog</span><span class="ic">🔍</span><span class="ic">🛒</span><span class="btn p">Agendar cita</span></div>
+  <div style="margin:6px 0"><span class="chip a">Todas</span><span class="chip">Guías</span><span class="chip">Tendencias</span></div>
+  <div class="row">
+   <div class="col"><div class="img" style="height:110px">Imagen del artículo</div><span class="small">CATEGORÍA</span><h3>Título del artículo (ej. cómo saber tu talla)</h3><div class="line" style="width:60%"></div></div>
+   <div class="col"><div class="img" style="height:110px">Imagen del artículo</div><span class="small">CATEGORÍA</span><h3>Título del artículo (ej. anillo de moda)</h3><div class="line" style="width:60%"></div></div>
+  </div>
+ </div>
+</div>
+
+<div class="comp" id="c09" style="width:640px">
+ <div class="title">09 · Info para fidelizar <span class="ref">ref. MisJoyas</span></div>
+ <div class="pad">
+  <div class="row box" style="align-items:center"><div class="col"><h2>N tiendas en todo Chile</h2><span class="btn p">Encuentra tu tienda</span></div><div class="img" style="width:260px;height:90px">Foto de tienda física</div></div>
+  <div class="box dark" style="text-align:center"><h2>Únete al club</h2><div class="line" style="width:70%;margin:4px auto"></div><span class="btn p">Únete ahora</span><span class="btn">Saber más</span></div>
+ </div>
+</div>
+
+<div class="comp" id="c10" style="width:760px">
+ <div class="title">10 · Footer de confianza <span class="ref">ref. MisJoyas</span></div>
+ <div class="pad box dark" style="margin:0">
+  <div class="row">
+   <div class="col"><b>LOGO</b><div class="small">Desde [año] · material</div><div style="margin-top:6px"><span class="ic">f</span><span class="ic">ig</span><span class="ic">tt</span></div><div style="margin-top:6px"><span class="ic">✓</span><span class="ic">✓</span> <span class="small">sellos</span></div></div>
+   <div class="col"><b>La empresa</b><div class="small">Quiénes somos<br>Preguntas frecuentes<br>Contacto</div></div>
+   <div class="col"><b>Políticas</b><div class="small">Despacho<br>Cambios y devoluciones<br>Privacidad</div></div>
+   <div class="col"><b>Suscríbete</b><div class="input" style="margin-top:4px">Tu correo →</div></div>
+  </div>
+  <div class="small" style="margin-top:8px;border-top:1px solid #888;padding-top:6px">Medios de pago: [ ▭ ] [ ▭ ] [ ▭ ] &nbsp;·&nbsp; © Marca</div>
+ </div>
+</div>
+
+</body></html>
