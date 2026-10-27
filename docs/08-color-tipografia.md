@@ -1,7 +1,3 @@
-# Color y tipografía — [Joyas Kofran]
-
-> Guía: [Color y tipografía](../evaluacion/guias/fase-2-specs/05-color-y-tipografia.md)
-
 # Color y tipografía — Joyas Kofran
 
 > Guía: [Color y tipografía](../evaluacion/guias/fase-2-specs/05-color-y-tipografia.md)
@@ -11,10 +7,12 @@
 | Rol | Color | HEX | Uso |
 |---|---|---|---|
 | Principal | Azul noche | `#1F4E79` | Header, footer, botones principales (CTA), títulos destacados |
+| Principal hover | Azul noche oscuro | `#183E60` | Estado hover y active de los botones principales |
 | Secundario | Gris plata | `#C9CDD3` | Bordes, divisores, fondos de tarjetas y filtros, detalles que evocan la plata. No se usa para texto |
 | Acento | Bronce dorado | `#8C5F22` | Enlaces, etiquetas ("Plata 925", "Garantía"), íconos, estados hover, precios destacados |
 | Fondo | Marfil | `#FAF8F5` | Fondo general de landing, blog y tienda; las tarjetas de producto van sobre blanco `#FFFFFF` |
 | Texto | Negro suave | `#1C1C1E` | Párrafos, descripciones de producto, texto de formularios |
+| Texto secundario | Gris grafito | `#5C5C5C` | Fechas, categorías del blog, textos de ayuda bajo los campos |
 | Éxito | Verde | `#2E7D4F` | Producto agregado al carrito, compra confirmada, formulario enviado |
 | Error | Rojo | `#B3261E` | Campos inválidos, falta de stock, error de pago o de formulario |
 
@@ -23,13 +21,18 @@
 | Combinación | Ratio | Resultado |
 |---|---|---|
 | Texto `#1C1C1E` sobre Fondo `#FAF8F5` | 16,05:1 | Pasa AAA |
-| Blanco `#FFFFFF` sobre Principal `#1F2A44` (botones, header) | 14,26:1 | Pasa AAA |
-| Principal `#1A1A1A` sobre Fondo `#FAF8F5` (títulos) | 13,45:1 | Pasa AAA |
+| Blanco `#FFFFFF` sobre Principal `#1F4E79` (botones, header, footer) | 8,66:1 | Pasa AAA |
+| Blanco `#FFFFFF` sobre Principal hover `#183E60` | 11,07:1 | Pasa AAA |
+| Principal `#1F4E79` sobre Fondo `#FAF8F5` (títulos destacados) | 8,17:1 | Pasa AAA |
 | Texto `#1C1C1E` sobre Secundario `#C9CDD3` | 10,66:1 | Pasa AAA |
+| Texto secundario `#5C5C5C` sobre Fondo `#FAF8F5` | 6,31:1 | Pasa AA |
 | Acento `#8C5F22` sobre Fondo `#FAF8F5` (enlaces, precios) | 5,25:1 | Pasa AA |
-| Blanco `#FFFFFF` sobre Acento `#8C5F22` (botón secundario) | 5,56:1 | Pasa AA |
+| Acento `#8C5F22` sobre Blanco `#FFFFFF` (precios en las tarjetas) | 5,56:1 | Pasa AA |
+| Blanco `#FFFFFF` sobre Acento `#8C5F22` (etiquetas "Plata 925") | 5,56:1 | Pasa AA |
 | Éxito `#2E7D4F` sobre Fondo `#FAF8F5` | 4,76:1 | Pasa AA |
 | Error `#B3261E` sobre Fondo `#FAF8F5` | 6,17:1 | Pasa AA |
+
+Ratios calculados con la fórmula de luminancia relativa de WCAG 2.1 (la misma del verificador de WebAIM).
 
 ## Tipografía
 
