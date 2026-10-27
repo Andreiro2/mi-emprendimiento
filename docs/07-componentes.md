@@ -4,7 +4,7 @@
 
 **Tablero en Whimsical:** [Joyas Kofran - Componentes](https://whimsical.com/franco-reyes2/34Fd4TELs1XmV6FNetkYD8)
 
-<!-- Captura del tablero: exporta el tablero de Whimsical como PNG y guárdalo como docs/img/componentes.png; después agrega aquí: ![Componentes calcados](img/componentes.png) -->
+![Tablero de componentes en Whimsical: blog, landing, tienda, reseñas, info para fidelizar y footer](img/componentes.png)
 
 Se calcaron 9 componentes que cubren la landing, el blog y la tienda. Cada uno pasó al design system con un nombre de token (`DESIGN.md`) y se usa en las pantallas de `09-spec-diseno.md`.
 
