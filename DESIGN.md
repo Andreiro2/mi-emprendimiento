@@ -354,7 +354,7 @@ El texto de párrafo nunca baja de 16px en mobile.
 
 ### Navbar (`navbar`)
 
-Logo "Joyas Kofran" a la izquierda; enlaces **Tienda, Blog y Contacto**; buscador e ícono de carrito con la cantidad de piezas. Siempre esos tres enlaces, en ese orden; no se agregan "Colecciones", "Atelier" ni "Sobre nosotros". La página actual se marca con subrayado de 2px.
+Fondo azul `primary` en todas las pantallas. Logo "Joyas Kofran" a la izquierda; enlaces **Tienda, Blog y Contacto**; buscador e ícono de carrito con la cantidad de piezas. Siempre esos tres enlaces, en ese orden; no se agregan "Colecciones", "Atelier" ni "Sobre nosotros". La página actual se marca con subrayado de 2px.
 
 ### Barra de confianza (`trust-bar`)
 
@@ -429,7 +429,7 @@ Subtotal, despacho según comuna (selector de comuna y plazo estimado), total, `
 
 ### Footer (`footer`)
 
-Enlaces a Tienda, Blog, Contacto, Preguntas frecuentes, Garantía y autenticidad, Guía de tallas, Despacho y cambios, Términos y condiciones y Política de privacidad; redes sociales; medios de pago y un único WhatsApp chileno (+56 9 XXXX XXXX).
+Enlaces a Tienda, Blog, Contacto, Preguntas frecuentes, Garantía y autenticidad, Guía de tallas, Despacho y cambios, Términos y condiciones y Política de privacidad; redes sociales; medios de pago (solo Webpay y transferencia) y un único WhatsApp chileno (+56 9 XXXX XXXX). Fondo azul `primary` y los mismos enlaces en todas las pantallas.
 
 ## Do's and Don'ts
 
@@ -450,3 +450,8 @@ Enlaces a Tienda, Blog, Contacto, Preguntas frecuentes, Garantía y autenticidad
 - No usar el gris plata como color de texto ni el bronce como fondo de botones principales.
 - No poner más de un `button-primary` por sección.
 - No usar ventanas emergentes al entrar al sitio ni cuentas regresivas.
+- No inventar plazos de garantía, días de cambio ni políticas que no estén en el brief.
+- No agregar medios de pago distintos de Webpay y transferencia.
+- No cambiar el navbar ni el footer entre pantallas.
+- No usar fotos con interfaces, capturas de otros sitios ni texto encima.
+- No usar marcadores entre corchetes como [Título] o [$XX.XXX]; siempre textos reales.

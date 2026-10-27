@@ -60,10 +60,13 @@ Cada prompt nombra los componentes tal como están en `DESIGN.md`. Los nombres d
 ```text
 Joyas Kofran vende solo joyas de plata ley 925 en Chile. Precios en pesos
 chilenos con formato $29.990, nunca USD. Tono cercano y claro, en español de
-Chile, con tuteo. No menciones oro, platino, diamantes, certificados GIA,
+Chile, con tuteo. Usa textos reales, nunca marcadores entre corchetes como
+[Título] o [$XX.XXX]. No menciones oro, platino, diamantes, certificados GIA,
 "atelier", "alta joyería" ni "inversión". No inventes años de trayectoria,
-cifras de clientas ni fundadores. Navbar con exactamente: logo "Joyas Kofran",
-Tienda, Blog, Contacto, buscador y carrito. Un único WhatsApp: +56 9 XXXX XXXX.
+cifras de clientas, fundadores, plazos de garantía ni políticas de cambio.
+Navbar azul con exactamente: logo "Joyas Kofran", Tienda, Blog, Contacto,
+buscador y carrito. Footer azul idéntico en todas las pantallas, con solo
+Webpay y transferencia. Un único WhatsApp: +56 9 XXXX XXXX.
 ```
 
 ### 1. Landing
