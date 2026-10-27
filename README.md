@@ -39,4 +39,4 @@ Primera ronda (descartada, documentada en el QA): https://stitch.withgoogle.com/
 
 - **ChatGPT 4.0:** para generar las ideas iniciales y la estructura del sitio.
 - **Stitch:** para crear el prototipo y los componentes visuales.
-- **Claude:** para unificar la paleta, redactar el `DESIGN.md` y los prompts de Stitch, dibujar los wireframes de referencia, generar las pantallas en Stitch y armar el QA. Las decisiones de marca (plata 925, tono cercano, proto-persona) vienen de la Fase 1.
+- **Claude:** para unificar la paleta, redactar el `DESIGN.md` y los prompts de Stitch, dibujar los wireframes y los componentes calcados en grises, armar los tableros de Whimsical, generar las pantallas en Stitch y armar el QA. Las decisiones de marca (plata 925, tono cercano, proto-persona) vienen de la Fase 1.

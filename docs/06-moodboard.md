@@ -2,7 +2,7 @@
 
 > Guía: [Moodboard](../evaluacion/guias/fase-2-specs/02-moodboard.md)
 
-**Tablero en Whimsical:** [Joyas Kofran - Moodboard] https://whimsical.com/franco-reyes2/Gri5it138B2qipavH1kLM1
+**Tablero en Whimsical:** [Joyas Kofran - Moodboard](https://whimsical.com/franco-reyes2/Gri5it138B2qipavH1kLM1)
 
 <img width="716" height="910" alt="moadboard" src="https://github.com/user-attachments/assets/8f2a4c36-4d39-4273-bc79-febb331a4aab" />
 
