@@ -455,3 +455,6 @@ Enlaces a Tienda, Blog, Contacto, Preguntas frecuentes, Garantía y autenticidad
 - No cambiar el navbar ni el footer entre pantallas.
 - No usar fotos con interfaces, capturas de otros sitios ni texto encima.
 - No usar marcadores entre corchetes como [Título] o [$XX.XXX]; siempre textos reales.
+- No agregar en mobile una barra de navegación inferior; la navegación va en el menú hamburguesa.
+- No reemplazar el logo del header por un título de pantalla en mobile.
+- No usar más de un h1 por pantalla; el header nunca usa h1.

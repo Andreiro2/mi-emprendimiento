@@ -240,4 +240,6 @@ Layout del design system:
 - Párrafos de 16px, h1 de 32px, botones y enlaces de al menos 44×44px, sin
   scroll horizontal. button-whatsapp flotante sin tapar el botón fijo.
 - Mismos textos, precios en pesos chilenos y mismo design system que la versión desktop.
+- Header con el logo en todas las pantallas (nunca un título de pantalla), sin barra
+  de navegación inferior y un solo h1. Footer azul igual al de desktop.
 ```
