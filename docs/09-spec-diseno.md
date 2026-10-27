@@ -1,4 +1,4 @@
-# Spec de diseño — Joyas Kofran
+# Spec de diseño — Joyas Kofran 
 
 > Guía: [Spec de diseño](../evaluacion/guias/fase-2-specs/06-spec-de-diseno.md)
 
