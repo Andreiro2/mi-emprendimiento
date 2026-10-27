@@ -10,11 +10,11 @@
 ## Palabras clave
 
 1. Elegancia
-2. Exclusividad
+2. Cercanía
 3. Calidad
 4. Brillo
 5. Confianza
-6. Sofisticación
+6. Atemporalidad
 
 ## Qué sensación buscamos
 
