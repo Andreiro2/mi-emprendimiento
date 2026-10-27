@@ -4,7 +4,7 @@
 
 La spec de diseño tiene dos partes:
 
-1. **[`DESIGN.md`](../DESIGN.md)** (en la raíz): el design system de Joyas Kofran, en el formato que Stitch importa.
+1. **[`DESIGN.md`](../DESIGN.md)** (en la raíz): el design system de Joyas Kofran, en el formato que Stitch importa. Validado con `npx @google/design.md lint DESIGN.md`: 0 errores, 0 advertencias (16 colores, 9 escalas tipográficas, 3 radios, 7 espaciados y 42 componentes).
 2. **Este documento:** las pantallas, escritas como prompts listos para pegar en Stitch.
 
 ## Wireframes
