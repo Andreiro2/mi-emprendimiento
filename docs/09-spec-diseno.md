@@ -13,7 +13,7 @@ La spec de diseño tiene dos partes:
 
 Wireframes de baja fidelidad de las 6 pantallas en desktop, más la landing, la tienda y la ficha de producto en mobile (fuente editable: [wireframes-fuente.html](img/wireframes-fuente.html)). Se construyeron con los componentes calcados en [07-componentes.md](07-componentes.md) y siguen los user flows de [05-arquitectura.md](05-arquitectura.md).
 
-**Tablero en Whimsical:** [pega aquí el link del tablero de wireframes]
+**Tablero en Whimsical:** [Joyas Kofran - Wireframes](https://whimsical.com/franco-reyes2/joyas-kofran-wireframes-LcZKw6fAUcidoP7nKimJUd) — las 6 pantallas desktop y 3 mobile, numeradas, con flechas para el flujo de compra (1→2→3→4) y el de contenido (5→6→3).
 
 ![Wireframes de Joyas Kofran: landing, tienda, ficha, carrito, blog, artículo y versiones mobile](img/wireframes.png)
 
