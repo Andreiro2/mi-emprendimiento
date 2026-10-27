@@ -1,6 +1,6 @@
-# [Nombre del emprendimiento] — Sitio web
+# Joyas Kofran — Sitio web
 
-[Descripción del emprendimiento en una o dos líneas.]
+Joyería de plata ley 925 con venta digital en Chile: piezas con garantía y atención cercana para darse un gusto o elegir un buen regalo.
 Incluye landing, blog y prototipo de tienda online.
 
 > Proyecto de la **Evaluación Parcial 02 — Sitios Web y Landing Pages (DUOC)**.
@@ -31,9 +31,12 @@ Incluye landing, blog y prototipo de tienda online.
 
 ## Prototipo
 
-https://stitch.withgoogle.com/projects/16219822956842085906
+https://stitch.withgoogle.com/projects/17675665430477937727
+
+Primera ronda (descartada, documentada en el QA): https://stitch.withgoogle.com/projects/16219822956842085906
 
 ## Uso de IA
 
 - **ChatGPT 4.0:** para generar las ideas iniciales y la estructura del sitio.
 - **Stitch:** para crear el prototipo y los componentes visuales.
+- **Claude:** para unificar la paleta, redactar el `DESIGN.md` y los prompts de Stitch, dibujar los wireframes de referencia, generar las pantallas en Stitch y armar el QA. Las decisiones de marca (plata 925, tono cercano, proto-persona) vienen de la Fase 1.
