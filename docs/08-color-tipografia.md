@@ -2,7 +2,7 @@
 
 > Guía: [Color y tipografía](../evaluacion/guias/fase-2-specs/05-color-y-tipografia.md)
 
-## Paleta
+## Paleta 
 
 | Rol | Color | HEX | Uso |
 |---|---|---|---|
