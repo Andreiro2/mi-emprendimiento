@@ -6,6 +6,9 @@
 
 ```text
 Lee DESIGN.md, docs/09-spec-diseno.md y docs/10-spec-desarrollo.md.
+Para el contexto del negocio y la usuaria, lee también docs/01-brief.md,
+docs/02-proto-personas.md, docs/05-arquitectura.md y las capturas de
+docs/img/ (wireframes y prototipo).
 En la carpeta stitch/ está el código exportado de Stitch de cada pantalla.
 Construye el sitio siguiendo exactamente docs/10-spec-desarrollo.md:
 solo HTML y CSS, la estructura de archivos y la navegación definidas,
@@ -25,7 +28,14 @@ joyas-kofran/
 ├── carrito.html          # Carrito (prototipo visual con productos de ejemplo)
 ├── blog.html             # Listado de artículos
 ├── articulo.html         # Artículo del blog
-├── contacto.html         # Contacto y datos de la tienda
+├── contacto.html         # Contacto, formulario de leads y datos de la tienda
+├── garantia.html         # Garantía y autenticidad (sello 925, certificado)
+├── guia-tallas.html      # Tablas de largos de cadena y tallas de anillo
+├── despacho.html         # Costos y plazos por zona, cambios y devoluciones
+├── preguntas-frecuentes.html
+├── terminos.html         # Términos y condiciones
+├── privacidad.html       # Política de privacidad
+├── 404.html              # Página no encontrada (GitHub Pages la usa sola)
 ├── css/
 │   ├── variables.css     # :root con colores, tipografía y espaciado
 │   ├── base.css          # Reset, tipografía, enlaces, botones, formularios
@@ -54,17 +64,25 @@ joyas-kofran/
 | `index.html` | Tarjeta de artículo | `articulo.html` |
 | `index.html` | Botón "Ver todos los artículos" | `blog.html` |
 | `tienda.html` | Tarjeta de producto | `producto.html` |
+| `producto.html` | Enlace "Ver guía de tallas" | `guia-tallas.html` |
+| `producto.html` | Enlace "Ver garantía" | `garantia.html` |
+| `producto.html` | Enlace "Ver despacho y cambios" | `despacho.html` |
 | `producto.html` | Botón "Agregar al carrito" | `carrito.html` |
-| `producto.html` | Enlace "Seguir comprando" | `tienda.html` |
+| `producto.html` | Enlace "Seguir mirando" | `tienda.html` |
 | `producto.html` | Botón "Consultar por WhatsApp" | Enlace `https://wa.me/` (pestaña nueva) |
-| `carrito.html` | Botón "Finalizar compra" | `contacto.html` (en el prototipo no hay pasarela de pago) |
+| `carrito.html` | Botón "Ir a pagar" | `contacto.html` (en el prototipo no hay pasarela de pago) |
 | `carrito.html` | Enlace "Seguir comprando" | `tienda.html` |
 | `blog.html` | Tarjeta de artículo | `articulo.html` |
-| `articulo.html` | Tarjeta "Producto relacionado" | `producto.html` |
+| `articulo.html` | Tarjeta de "Piezas mencionadas" | `producto.html` |
+| `articulo.html` | Enlace en el texto "Garantía y autenticidad" | `garantia.html` |
+| `articulo.html` | Botón "Ir a contacto" | `contacto.html` |
 | `articulo.html` | Botón "Consultar por WhatsApp" | Enlace `https://wa.me/` (pestaña nueva) |
 | `articulo.html` | Enlace "Volver al blog" | `blog.html` |
 | `contacto.html` | Enlace de correo | `mailto:` con el correo del negocio |
 | Footer (todas) | Enlaces a Tienda, Blog y Contacto | `tienda.html`, `blog.html`, `contacto.html` |
+| Footer (todas) | Preguntas frecuentes, Garantía y autenticidad, Guía de tallas, Despacho y cambios | `preguntas-frecuentes.html`, `garantia.html`, `guia-tallas.html`, `despacho.html` |
+| Footer (todas) | Términos y condiciones, Política de privacidad | `terminos.html`, `privacidad.html` |
+| `404.html` | Botones "Ir al inicio" e "Ir a la tienda" | `index.html`, `tienda.html` |
 | Footer (todas) | Redes sociales | URL externa de cada red (pestaña nueva, `rel="noopener"`) |
 
 Todos los enlaces internos usan rutas relativas (por ejemplo `tienda.html`, no `/tienda.html`), para que funcionen en GitHub Pages dentro de la carpeta del repositorio.
@@ -96,18 +114,24 @@ Todos los enlaces internos usan rutas relativas (por ejemplo `tienda.html`, no `
 
 **carrito.html**
 - `<h1>` "Carrito" y una tabla `<table>` con `<caption>`, encabezados `<th scope="col">` y una fila por producto de ejemplo.
-- Resumen del pedido en `<aside>` o `<section>` con el total y el botón "Finalizar compra".
+- Resumen del pedido en `<aside>` con selector de comuna, despacho, total y el botón "Ir a pagar".
 
 **blog.html**
 - `<h1>` "Blog" y lista de artículos en `<ul>`. Cada tarjeta es un `<article>` con imagen, categoría, `<h2>`, extracto y fecha en `<time datetime="">`.
 
 **articulo.html**
 - `<article>` con `<h1>`, fecha en `<time>`, imagen principal con `<figure>` y `<figcaption>`, y el contenido dividido con `<h2>` y `<h3>`.
-- Al final, `<aside>` con "Producto relacionado" y botón de contacto.
+- `<aside>` con "Piezas mencionadas" y botones de WhatsApp y contacto.
 
 **contacto.html**
 - `<h1>` "Contacto" y un `<form>` con `<label for>` asociado a cada `<input>` y `<textarea>`, con los atributos `required` y `type` correctos (`email`, `tel`).
 - Datos de contacto en `<address>`.
+
+**garantia.html, guia-tallas.html, despacho.html, preguntas-frecuentes.html, terminos.html y privacidad.html**
+- `<h1>` con el nombre de la página y el contenido en `<section>` con `<h2>`. Las tablas de tallas y despacho usan `<table>` con `<caption>` y `<th scope="col">`. Las preguntas frecuentes usan `<details>` y `<summary>`.
+
+**404.html**
+- `<h1>` "No encontramos esta página", un texto corto y dos enlaces: inicio y tienda.
 
 ## 4. Organización del CSS
 
@@ -120,12 +144,13 @@ Breakpoints: mobile hasta 767px, tablet de 768px a 1023px y desktop desde 1024px
   /* los valores salen de DESIGN.md */
 
   /* Colores */
-  --color-primary: #1F2A44;
-  --color-primary-hover: #161F33;
+  --color-primary: #1F4E79;
+  --color-primary-hover: #183E60;
   --color-on-primary: #FFFFFF;
   --color-secondary: #C9CDD3;
   --color-on-secondary: #1C1C1E;
   --color-tertiary: #8C5F22;
+  --color-tertiary-hover: #6F4A1A;
   --color-on-tertiary: #FFFFFF;
   --color-neutral: #FAF8F5;
   --color-surface: #FFFFFF;
@@ -143,7 +168,12 @@ Breakpoints: mobile hasta 767px, tablet de 768px a 1023px y desktop desde 1024px
   --fs-h2: 2.25rem;     /* 36px desktop, 1.625rem (26px) en mobile */
   --fs-h3: 1.5rem;      /* 24px desktop, 1.25rem (20px) en mobile */
   --fs-body: 1rem;      /* 16px */
+  --fs-title-sm: 1rem;  /* 16px, nombre en tarjetas */
+  --fs-price: 1.125rem; /* 18px */
+  --fs-small: 0.875rem; /* 14px */
+  --fs-tag: 0.8125rem;  /* 13px */
   --fs-button: 1rem;    /* 16px */
+  --ls-button: 0.5px;
   --lh-heading: 1.2;
   --lh-body: 1.6;
 
@@ -157,18 +187,42 @@ Breakpoints: mobile hasta 767px, tablet de 768px a 1023px y desktop desde 1024px
   --space-3xl: 64px;
 
   /* Forma */
+  --radius-sm: 4px;
   --radius-md: 8px;
   --radius-full: 9999px;
 
   /* Layout */
   --container-max: 1200px;
+  --gutter: 16px;       /* 24px en tablet y 32px en desktop */
+  --filters-width: 240px;
+  --touch-min: 44px;
+
+  /* Elevación */
+  --border-card: 1px solid var(--color-secondary);
+  --shadow-hover: 0 4px 12px rgba(31, 78, 121, 0.12);
+  --overlay: rgba(28, 28, 30, 0.5);
 }
 ```
+
+**Componentes del DESIGN.md y su clase CSS**
+
+| Token en `DESIGN.md` | Clase CSS |
+|---|---|
+| `navbar` / `footer` / `trust-bar` | `.cabecera` / `.pie` / `.barra-confianza` |
+| `button-primary` / `button-secondary` / `button-whatsapp` | `.boton-primario` / `.boton-secundario` / `.boton-whatsapp` |
+| `tag-925` | `.etiqueta-925` |
+| `chip-filter` / `search-bar` | `.chip-filtro` / `.buscador` |
+| `card-product` / `card-category` / `card-article` / `card-review` | `.tarjeta-producto` / `.tarjeta-categoria` / `.tarjeta-articulo` / `.tarjeta-resena` |
+| `size-selector` / `price` | `.selector-talla` / `.precio` |
+| `input-field` / `lead-form` / `cart-summary` | `.campo-formulario` / `.formulario-leads` / `.resumen-carrito` |
+| `message-success` / `message-error` / `benefit-item` | `.mensaje-exito` / `.mensaje-error` / `.beneficio` |
+
+Los estados del `DESIGN.md` se traducen así: `-hover` → `:hover`, `-active` → `:active` o `[aria-pressed="true"]` / `:checked`, `-disabled` → `:disabled` o `[aria-disabled="true"]`.
 
 **Convenciones**
 - Los colores, tamaños de fuente y espaciados se usan siempre con `var(--...)`. No se escriben valores sueltos en los demás archivos.
 - Nombres de clases en español y minúsculas, con guiones (`tarjeta-producto`, `boton-primario`, `etiqueta-oferta`).
-- Una clase por componente: `boton-primario`, `boton-secundario`, `tarjeta-producto`, `campo-formulario`, `mensaje-error`.
+- Una clase por componente, según la tabla anterior.
 - Estados `:hover`, `:focus-visible` y `:disabled` definidos para botones, enlaces e inputs. El foco visible usa un contorno de 2px con `--color-tertiary`.
 - Las fuentes se cargan desde Google Fonts con `<link>` en el `<head>` y `font-display: swap`.
 - No se usa JavaScript. El menú móvil se resuelve solo con CSS (checkbox y `label`).
@@ -176,7 +230,7 @@ Breakpoints: mobile hasta 767px, tablet de 768px a 1023px y desktop desde 1024px
 ## 5. Criterios de aceptación
 
 **Navegación**
-- [ ] Existen los 7 archivos HTML definidos y se abren sin errores 404 en GitHub Pages.
+- [ ] Existen los 14 archivos HTML definidos y se abren sin errores 404 en GitHub Pages (salvo `404.html`, que aparece al escribir una URL inexistente).
 - [ ] Todos los enlaces de la tabla de la sección 2 llevan al destino indicado.
 - [ ] El menú principal aparece igual en todas las páginas y marca la página actual con `aria-current="page"`.
 - [ ] Desde cualquier página se llega al carrito y a WhatsApp en un clic.
@@ -186,13 +240,15 @@ Breakpoints: mobile hasta 767px, tablet de 768px a 1023px y desktop desde 1024px
 - [ ] Flujo de compra: tienda → producto → carrito se puede recorrer solo con enlaces.
 - [ ] Flujo de contenido: blog → artículo → producto relacionado o contacto funciona completo.
 - [ ] El menú móvil se abre y se cierra solo con CSS.
-- [ ] El botón de WhatsApp abre una conversación con el número del negocio.
+- [ ] El botón de WhatsApp abre una conversación con el número del negocio y, en la ficha, con el nombre de la pieza ya escrito.
+- [ ] Todos los precios están en pesos chilenos con formato $29.990 y la palabra "plata 925" aparece en cada tarjeta de producto.
+- [ ] La ficha muestra medidas, sello 925, garantía y costo de despacho antes del botón "Agregar al carrito".
 - [ ] El formulario de contacto muestra validación del navegador (`required`, `type="email"`). El envío real queda como prototipo visual, porque no hay backend.
 - [ ] Las funciones que requieren servidor (filtros reales, carrito dinámico, pago) están diseñadas pero se indican como prototipo visual.
 
 **Diseño**
 - [ ] Todos los colores y tamaños vienen de las variables de `:root`, sin valores sueltos.
-- [ ] Los colores y las fuentes coinciden con `DESIGN.md` y con `docs/08-color-tipografia.md`.
+- [ ] Los colores y las fuentes coinciden con `DESIGN.md` y con `docs/08-color-tipografia.md` (principal `#1F4E79`, Cormorant Garamond e Inter).
 - [ ] Los botones, tarjetas, etiquetas e inputs usan los mismos estilos en todas las páginas.
 - [ ] Los botones tienen estados hover, foco y deshabilitado.
 - [ ] El diseño se parece a las pantallas de Stitch en estructura y estilo.
@@ -200,7 +256,8 @@ Breakpoints: mobile hasta 767px, tablet de 768px a 1023px y desktop desde 1024px
 **Responsive**
 - [ ] No hay scroll horizontal a 360px, 768px y 1280px de ancho.
 - [ ] En mobile las grillas pasan a 1 columna y el menú se colapsa.
-- [ ] En tablet las tarjetas se muestran en 2 columnas y en desktop en 3 o 4.
+- [ ] En tablet las tarjetas se muestran en 2 columnas y en desktop en 3 (4 en la landing).
+- [ ] En mobile el botón "Agregar al carrito" queda fijo abajo y el botón flotante de WhatsApp no lo tapa.
 - [ ] Los títulos usan los tamaños mobile y desktop definidos en `docs/08-color-tipografia.md`.
 - [ ] Las imágenes se adaptan al ancho (`max-width: 100%`) y no se deforman.
 - [ ] Los botones y enlaces táctiles miden al menos 44×44px.
