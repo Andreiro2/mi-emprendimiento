@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#1F4E79", "tertiary": "#8C5F22", "tertiary-fixed-dim": "#f6bc76", "on-surface-variant": "#5C5C5C", "on-primary": "#FFFFFF", "error": "#B3261E", "on-surface": "#1b1c1a", "tertiary-fixed": "#ffddb8", "surface-bright": "#fbf9f6", "disabled": "#D6D6D6", "surface-dim": "#dbdad7", "secondary-container": "#dfe3e9", "surface-container": "#efeeeb", "surface-tint": "#35618d", "secondary": "#C9CDD3", "tertiary-container": "#6b4305", "on-error-container": "#93000a", "surface": "#FFFFFF", "outline-variant": "#c2c7d0", "on-primary-fixed-variant": "#184974", "success": "#2E7D4F", "on-secondary-fixed-variant": "#43474c", "error-container": "#ffdad6", "surface-container-low": "#f5f3f0", "on-error": "#ffffff", "primary-hover": "#183E60", "primary-fixed": "#d1e4ff", "primary-fixed-dim": "#a0cafc", "on-secondary": "#1C1C1E", "on-primary-fixed": "#001d35", "surface-container-highest": "#e4e2df", "on-primary-container": "#95bff1", "background": "#fbf9f6", "primary-container": "#1f4e79", "inverse-surface": "#30312f", "secondary-fixed-dim": "#c3c7cd", "surface-variant": "#e4e2df", "on-background": "#1b1c1a", "tertiary-hover": "#6F4A1A", "on-secondary-container": "#60656a", "on-secondary-fixed": "#171c20", "outline": "#72777f", "on-tertiary-fixed": "#2a1700", "surface-container-lowest": "#ffffff", "inverse-primary": "#a0cafc", "on-disabled": "#4A4A4A", "surface-container-high": "#eae8e5", "on-tertiary": "#FFFFFF", "neutral": "#FAF8F5", "secondary-fixed": "#dfe3e9", "on-tertiary-fixed-variant": "#653e01", "on-tertiary-container": "#eab26d", "inverse-on-surface": "#f2f0ed" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "3xl": "64px", "md": "16px", "space-3xl": "64px", "sm": "8px", "space-md": "16px", "lg": "24px", "gutter": "16px", "xs": "4px", "2xl": "48px", "space-xs": "4px", "space-lg": "24px", "margin": "24px", "space-sm": "8px", "space-xl": "32px", "xl": "32px", "space-2xl": "48px" }, "fontFamily": { "body-md": ["Inter"], "label-md": ["Inter"], "headline-lg-mobile": ["Cormorant Garamond"], "headline-display": ["Cormorant Garamond"], "body-sm": ["Inter"], "label-sm": ["Inter"], "headline-md": ["Cormorant Garamond"], "title-sm": ["Inter"], "headline-lg": ["Cormorant Garamond"], "price-md": ["Inter"], "headline-md-mobile": ["Cormorant Garamond"], "headline-display-mobile": ["Cormorant Garamond"] }, "fontSize": { "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }], "label-md": ["16px", { "lineHeight": "1", "letterSpacing": "0.5px", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "1.2", "fontWeight": "600" }], "headline-display": ["48px", { "lineHeight": "1.1", "fontWeight": "600" }], "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }], "label-sm": ["13px", { "lineHeight": "1", "letterSpacing": "0.5px", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "1.25", "fontWeight": "600" }], "title-sm": ["16px", { "lineHeight": "1.4", "fontWeight": "600" }], "headline-lg": ["36px", { "lineHeight": "1.2", "fontWeight": "600" }], "price-md": ["18px", { "lineHeight": "1.3", "fontWeight": "600" }], "headline-md-mobile": ["20px", { "lineHeight": "1.25", "fontWeight": "600" }], "headline-display-mobile": ["32px", { "lineHeight": "1.1", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-body-md text-on-surface flex flex-col min-h-screen antialiased"><header class="fixed top-0 inset-x-0 z-50 pt-safe bg-primary text-on-primary shadow-[0_1px_8px_rgba(0,0,0,0.08)]"><div class="bg-tertiary text-on-tertiary text-center py-xs px-gutter flex items-center justify-center gap-xs"><span class="material-symbols-outlined text-[14px]">verified</span><span class="font-label-sm text-label-sm tracking-wider uppercase">Plata ley 925 certificada</span></div><div class="h-16 px-gutter flex items-center justify-between"><a class="flex items-center" data-path="tienda-catalogo" href="#"><span class="font-headline-md text-headline-md text-on-primary tracking-normal">Joyas Kofran</span></a><div class="flex items-center gap-xs"><button aria-label="Buscar" class="w-11 h-11 flex items-center justify-center text-on-primary hover:text-primary-fixed-dim transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><a aria-label="Carrito de compras" class="relative w-11 h-11 flex items-center justify-center text-on-primary hover:text-primary-fixed-dim transition-colors" data-path="carro-de-compras" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-sm text-[10px] flex items-center justify-center font-bold">1</span></a><div class="w-8 h-8 rounded-full bg-primary-hover flex items-center justify-center ml-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><button aria-label="Menú" class="w-11 h-11 flex items-center justify-center text-on-primary hover:text-primary-fixed-dim transition-colors"><span class="material-symbols-outlined text-[24px]">menu</span></button></div></div><nav class="bg-primary-hover px-gutter py-xs flex items-center justify-between text-on-primary/90" data-active-classes="text-tertiary"><a class="inline-flex items-center gap-xs py-xs text-on-primary hover:text-tertiary-fixed transition-colors font-body-sm text-body-sm" data-path="tienda-catalogo" href="#"><span class="material-symbols-outlined text-[18px]">arrow_back</span><span>Volver a la tienda</span></a><span class="font-body-sm text-body-sm text-on-primary/70 truncate max-w-[150px]">Ficha De Producto</span></nav></header><main class="flex flex-col relative w-full pt-32 bg-background flex-grow"><div class="flex flex-col w-full pb-28">
+<!-- 1. Migas de pan compactas -->
+<div class="px-gutter pt-xs pb-sm">
+<a class="inline-flex items-center gap-xs text-primary hover:text-primary-hover font-body-sm text-body-sm py-xs" data-path="tienda-catalogo" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Cadenas y collares</span>
+</a>
+</div>
+<!-- 2. Galería de fotos mobile (1:1) -->
+<section class="flex flex-col px-gutter">
+<div class="relative w-full aspect-square bg-surface-container rounded-DEFAULT overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover transition-opacity duration-300" data-alt="Cadena veneciana de plata ley 925 sólida con acabado brillante colocada con delicadeza sobre fondo de lino color marfil neutro, iluminación natural suave, fotografía de joyería fina de alta resolución, reflejos pulcros en los eslabones cuadrados metálicos." id="main-product-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU7f4AcTpkcwjUpfRcyUkDB94cbh-lB3pBxjMNRVvBa5iLgz0CbEyqIOY1g1qiY_PSb6czvLQvaBm7F7NvVbYZUrDNU66gyr69yEsV-eVEcGgZ_aYYq2KC2oyyke-pRskR9EdBqEC3yPkg95X43q0UPYeFAXc0OMXdB0bNFbbgy2RLoRRyPGqeVQoHS6ZCq0kbG5vGtEsOwWyBooLcvIWrCE_8Pk1GXe9fYviLiImu"/>
+<span class="absolute top-sm left-sm bg-tertiary text-on-tertiary font-label-sm text-label-sm px-sm py-xs rounded-full uppercase tracking-wider shadow-sm">
+        Plata Ley 925
+      </span>
+<span class="absolute bottom-sm right-sm bg-surface/90 text-on-surface text-[12px] font-medium px-sm py-xs rounded-full shadow-sm">
+        1 / 4
+      </span>
+</div>
+<!-- Indicador de puntos (dots) -->
+<div class="flex justify-center items-center gap-2 py-sm">
+<button aria-label="Foto 1" class="gallery-dot w-2.5 h-2.5 rounded-full bg-primary transition-all duration-300" onclick="switchPhoto(0)"></button>
+<button aria-label="Foto 2" class="gallery-dot w-2 h-2 rounded-full bg-secondary transition-all duration-300" onclick="switchPhoto(1)"></button>
+<button aria-label="Foto 3" class="gallery-dot w-2 h-2 rounded-full bg-secondary transition-all duration-300" onclick="switchPhoto(2)"></button>
+<button aria-label="Foto 4" class="gallery-dot w-2 h-2 rounded-full bg-secondary transition-all duration-300" onclick="switchPhoto(3)"></button>
+</div>
+<!-- Miniaturas táctiles -->
+<div class="grid grid-cols-4 gap-xs pt-xs">
+<button aria-label="Ver plano detalle de cadena" class="thumb-btn aspect-square rounded-DEFAULT overflow-hidden bg-surface-container shadow-sm p-0.5" onclick="switchPhoto(0)">
+<img class="w-full h-full object-cover rounded-DEFAULT" data-alt="Detalle en primer plano de eslabones venecianos cuadrados en plata 925 sobre fondo blanco cálido, brillo metálico puro y limpio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBm-o7yMEnQ0s_aFqgZIsMwf5bweM6twSQ2AO5jS2Q_-QT2Zz12Q_Vou8tgtbn6ivPNVSPO8b4XiVtGZjvGlLVjGRJLYZRXXmmTrGSEj41s7IMcUm9MUb8zI_dffoybEj0JnPabsOz_QcXyEg94y0ntOdPLtk2Hjac_qt0SyYOZLuxaz8WcCVtqUoWl_Zt8GfV8koRuLr3xJpqO4AWBQapC4vne5AXoIjQmidzZ04nJ"/>
+</button>
+<button aria-label="Ver puesta en cuello" class="thumb-btn aspect-square rounded-DEFAULT overflow-hidden bg-surface-container opacity-70 p-0.5" onclick="switchPhoto(1)">
+<img class="w-full h-full object-cover rounded-DEFAULT" data-alt="Mujer usando la cadena veneciana de plata 925 en el cuello, vista de perfil con piel natural, luz de día y estilo minimalista elegante." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfC_ABUEA5IqTvp09r6cVPbm_M_2_zpgXeYzRubLs4QJXDQB9-ZgbHRTRSq5tBF8jo52wITp2_RDJqvkbSvL37O-XWi_X5aBVrPMpjo-Y6iPunKDmBQJZdXN2VBqMfz77HDIYtg_0kwcwwBAXEeEw8S-tWf1H2Olpnz-lxrUHC_bKMzABeu649iAomiQenOkIzKbCNmnJOurfaXyetjdlHAmd76Dr0ZNuSuu-auWlA"/>
+</button>
+<button aria-label="Ver cierre y broche" class="thumb-btn aspect-square rounded-DEFAULT overflow-hidden bg-surface-container opacity-70 p-0.5" onclick="switchPhoto(2)">
+<img class="w-full h-full object-cover rounded-DEFAULT" data-alt="Acercamiento macro al broche y terminal de cadena de plata fina ley 925 con mecanismo de resorte impecable sobre fondo textil." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDutrV9oOzu23kY6gFW1EtCylYbM9kwqJ16qIWTJ-vapQlI4PwJHID87umuae21SYF181J7BZVJ_3brWgWWSZ18OVCQKok2ngc-Grs6OVpKdMWpT_cbD3ET8wYHNj3OdxHe0IGZ7nRnmVlPkbHriN1xqvca5i8NWWagGldyISrntyRCqKvEx_0FjV7lcV6NDnyrOjv7X-QZH-cC0DxqN1JMy71msEU5caDi5b6UIYlv"/>
+</button>
+<button aria-label="Ver punzón grabado" class="thumb-btn aspect-square rounded-DEFAULT overflow-hidden bg-surface-container opacity-70 p-0.5" onclick="switchPhoto(3)">
+<img class="w-full h-full object-cover rounded-DEFAULT" data-alt="Fotografía macro de alta precisión mostrando el punzón y sello grabado 925 en el broche de plata genuina artesanal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEGTXpfWoL7S2jVODRjISjaoFa0NPAF0txDXPaiDJnwIOYDmQ57uroV478SZnDaGrumsPYeJGqyUnDVDEa3Dv2EQd7a_wN6ijzWqE-AJ6RcJ3HLD78GaW7yuUKi27RG08kzM9fuYb8XvWaoEo55igCfZRgDf4K2-XQVy1ZX1YRpfoVK-0H3uJjQMbZ4OIwJaz5CdlPPfZNsT4ayinfA12mB2UPeL11esN308kv08iA"/>
+</button>
+</div>
+</section>
+<!-- 3. Información principal del producto -->
+<section class="flex flex-col px-gutter pt-lg">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-xs text-tertiary font-label-md text-label-md uppercase tracking-wider bg-tertiary-fixed/60 px-sm py-xs rounded-full">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Plata 925</span>
+</span>
+<button aria-label="Guardar en favoritos" class="min-w-[44px] min-h-[44px] inline-flex items-center justify-center gap-xs px-sm py-xs rounded-full bg-surface-container text-on-surface hover:text-error transition-colors" id="btn-save" onclick="toggleSave()">
+<span class="material-symbols-outlined text-[20px]" id="save-icon">favorite_border</span>
+<span class="font-label-sm text-label-sm" id="save-text">Guardar</span>
+</button>
+</div>
+<h1 class="font-headline-display-mobile text-headline-display-mobile text-on-surface pt-sm leading-tight">
+      Cadena veneciana 45 cm
+    </h1>
+<div class="flex flex-col pt-xs">
+<div class="flex items-baseline gap-xs">
+<span class="font-price-md text-[24px] font-semibold text-primary">$24.990</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-normal">CLP</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-0.5">Precio final con IVA incluido</p>
+</div>
+</section>
+<!-- 4. Selector de largo/talla -->
+<section class="flex flex-col px-gutter pt-lg">
+<div class="flex items-center justify-between pb-sm">
+<span class="font-title-sm text-title-sm text-on-surface" id="label-length">
+        Elige tu largo: <strong class="font-semibold text-primary">45 cm</strong> (Gargantilla clásica)
+      </span>
+<a class="text-tertiary hover:text-tertiary-hover font-label-sm text-label-sm inline-flex items-center gap-xs py-1" data-path="guia-de-tallas" href="#">
+<span class="material-symbols-outlined text-[16px]">straighten</span>
+<span>Ver guía</span>
+</a>
+</div>
+<div class="grid grid-cols-3 gap-sm">
+<button class="size-opt min-h-[48px] py-2 px-1 rounded-DEFAULT bg-surface text-on-surface flex flex-col items-center justify-center transition-all shadow-sm text-center" onclick="selectLength(this, '40 cm', 'Al cuello / Choker', '$23.990')">
+<span class="font-label-md text-label-md">40 cm</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Choker</span>
+</button>
+<button class="size-opt min-h-[48px] py-2 px-1 rounded-DEFAULT bg-primary text-on-primary flex flex-col items-center justify-center transition-all shadow-md text-center" onclick="selectLength(this, '45 cm', 'Gargantilla clásica', '$24.990')">
+<span class="font-label-md text-label-md">45 cm</span>
+<span class="font-body-sm text-[11px] text-on-primary/80">Estándar</span>
+</button>
+<button class="size-opt min-h-[48px] py-2 px-1 rounded-DEFAULT bg-surface text-on-surface flex flex-col items-center justify-center transition-all shadow-sm text-center" onclick="selectLength(this, '50 cm', 'Largo medio / Pecho', '$26.990')">
+<span class="font-label-md text-label-md">50 cm</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Medio</span>
+</button>
+</div>
+</section>
+<!-- 5. Medidas y especificaciones técnicas -->
+<section class="px-gutter pt-lg">
+<div class="bg-surface rounded-DEFAULT p-md shadow-sm">
+<h3 class="font-title-sm text-title-sm text-on-surface mb-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">tune</span>
+<span>Ficha técnica de la pieza</span>
+</h3>
+<dl class="flex flex-col gap-xs font-body-sm text-body-sm">
+<div class="flex items-center justify-between py-xs bg-surface-container-low px-sm rounded-DEFAULT">
+<dt class="text-on-surface-variant">Largo total</dt>
+<dd class="font-semibold text-on-surface" id="spec-length">45 cm</dd>
+</div>
+<div class="flex items-center justify-between py-xs px-sm rounded-DEFAULT">
+<dt class="text-on-surface-variant">Grosor del eslabón</dt>
+<dd class="font-semibold text-on-surface">1,2 mm</dd>
+</div>
+<div class="flex items-center justify-between py-xs bg-surface-container-low px-sm rounded-DEFAULT">
+<dt class="text-on-surface-variant">Peso estimado</dt>
+<dd class="font-semibold text-on-surface">2,8 g (Plata maciza 925)</dd>
+</div>
+<div class="flex items-center justify-between py-xs px-sm rounded-DEFAULT">
+<dt class="text-on-surface-variant">Tipo de cierre</dt>
+<dd class="font-semibold text-on-surface">Mosquetón redondo de seguridad</dd>
+</div>
+</dl>
+</div>
+</section>
+<!-- 6. Bloque de autenticidad y garantía -->
+<section class="px-gutter pt-md">
+<div class="bg-surface-container-low rounded-DEFAULT p-md shadow-sm flex flex-col gap-xs">
+<div class="flex items-start gap-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center shrink-0 text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-title-sm text-title-sm text-on-surface">Sello 925 grabado en el broche</h3>
+<p class="font-body-md text-body-md text-on-surface-variant pt-xs">
+            Garantía ante fallas con punzón oficial visible a simple vista. Plata maciza hipoalergénica sin baños sintéticos ni fantasía.
+          </p>
+</div>
+</div>
+<a class="inline-flex items-center gap-xs text-primary font-label-md text-label-md pt-xs self-start hover:text-primary-hover" data-path="cuidado-de-joyas" href="#">
+<span>Ver garantía y autenticidad</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- 7. Bloque de despacho transparente -->
+<section class="px-gutter pt-md">
+<div class="bg-surface-container-low rounded-DEFAULT p-md shadow-sm flex flex-col gap-xs">
+<div class="flex items-start gap-sm">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center shrink-0 text-on-primary-fixed">
+<span class="material-symbols-outlined text-[22px]">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-title-sm text-title-sm text-on-surface">Despacho a Viña del Mar: $3.490</h3>
+<p class="font-body-md text-body-md text-on-surface-variant pt-xs">
+            Llega en 2 a 3 días hábiles directo a tu domicilio con seguimiento en línea.
+          </p>
+</div>
+</div>
+<a class="inline-flex items-center gap-xs text-primary font-label-md text-label-md pt-xs self-start hover:text-primary-hover" data-path="politicas-despacho" href="#">
+<span>Ver despacho y cambios</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- 8. Botón secundario de WhatsApp en el flujo -->
+<section class="px-gutter pt-lg flex flex-col items-center">
+<a class="w-full min-h-[48px] h-12 bg-success hover:bg-success/90 text-on-error rounded-full flex items-center justify-center gap-xs font-label-md text-label-md shadow-sm transition-colors" href="https://wa.me/56912345678?text=Hola,%20tengo%20dudas%20sobre%20la%20Cadena%20veneciana%20de%20plata%20925">
+<span class="material-symbols-outlined text-[22px]">chat</span>
+<span>Consultar por WhatsApp</span>
+</a>
+<span class="font-body-sm text-body-sm text-on-surface-variant pt-xs text-center">
+      Te asesoramos en minutos · Respondemos de Lun a Sáb
+    </span>
+</section>
+<!-- 9. Descripción y cuidados de tu joya -->
+<section class="px-gutter pt-xl flex flex-col gap-md">
+<h2 class="font-headline-md-mobile text-headline-md-mobile text-on-surface">
+      Descripción y cuidados de tu joya
+    </h2>
+<p class="font-body-md text-body-md text-on-surface">
+      Una cadena clásica y atemporal de eslabones venecianos cuadrados en legítima plata ley 925 con acabado brillante. Diseñada para usar sola a diario o combinar con tus dijes favoritos sin tirones en el cuello. Su tejido cerrado y compacto le otorga una caída pulcra y fluida con alta resistencia al uso continuo.
+    </p>
+<div class="flex flex-col gap-sm pt-xs">
+<div class="bg-surface rounded-DEFAULT p-md shadow-sm flex flex-col gap-xs">
+<div class="flex items-center gap-xs text-tertiary">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">1. Almacenamiento seco</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Guárdala en su estuche o bolsita cerrada cuando no la uses para evitar el contacto con el aire y la humedad.
+        </p>
+</div>
+<div class="bg-surface rounded-DEFAULT p-md shadow-sm flex flex-col gap-xs">
+<div class="flex items-center gap-xs text-tertiary">
+<span class="material-symbols-outlined text-[20px]">sanitizer</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">2. Cuida los químicos</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Póntela después de aplicarte cremas y perfumes; los químicos pueden opacar el brillo natural de la plata.
+        </p>
+</div>
+<div class="bg-surface rounded-DEFAULT p-md shadow-sm flex flex-col gap-xs">
+<div class="flex items-center gap-xs text-tertiary">
+<span class="material-symbols-outlined text-[20px]">auto_fix_high</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">3. Limpieza suave</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Límpiala suavemente con un paño de microfibra seco para devolverle su brillo espejo al instante.
+        </p>
+</div>
+</div>
+<a class="inline-flex items-center gap-xs text-primary font-body-sm text-body-sm font-semibold hover:text-primary-hover" data-path="cuidado-de-joyas" href="#">
+<span>Leer más en nuestro blog: Por qué se oscurece la plata 925 y cómo limpiarla en casa sin dañarla</span>
+<span class="material-symbols-outlined text-[16px] shrink-0">arrow_forward</span>
+</a>
+</section>
+<!-- 10. Combina con estas piezas (1 columna) -->
+<section class="px-gutter pt-xl flex flex-col gap-md">
+<div class="flex flex-col">
+<h2 class="font-headline-md-mobile text-headline-md-mobile text-on-surface">
+        Combina con estas piezas
+      </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Complementos fabricados en la misma ley 925 garantizada
+      </p>
+</div>
+<div class="flex flex-col gap-md">
+<!-- Producto 1 -->
+<article class="bg-surface rounded-DEFAULT p-sm shadow-sm flex items-center gap-md">
+<div class="w-24 h-24 shrink-0 rounded-DEFAULT overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Aros argolla de 12 mm en plata fina ley 925 pulida sobre fondo marfil de alta textura y luz limpia." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqhqxCBxP_EjSNdUxYvVgjJ_XR5BFxqppuER__ZsVyT4iReMIr7ODQc9azGPYntklUf_-z3vG2j8vq64bQOraJE_Fj1f-q7j1T-_nxlvYzP-StrfpBP5T-CW1IpinRACr7ieAPw0kQDluO3EA8ykzKXUe4VQ1E0PCcVeqQrpXUKOe1oBB8x2j15j1kj3JgnmiQtngrv2t_Oja9AvbBWp87MK1JQWJo3DpbZNRAYXIV"/>
+</div>
+<div class="flex flex-col flex-grow min-w-0 justify-between py-xs">
+<div>
+<span class="font-label-sm text-[11px] text-tertiary font-semibold uppercase">Plata 925</span>
+<h3 class="font-title-sm text-title-sm text-on-surface truncate">Aros argolla 12 mm</h3>
+<span class="font-price-md text-price-md font-semibold text-primary block pt-xs">$14.990</span>
+</div>
+<a class="mt-xs inline-flex items-center justify-center min-h-[44px] h-10 px-md rounded-full bg-surface-container text-primary font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" data-path="ficha-de-producto" href="#">
+            Ver producto
+          </a>
+</div>
+</article>
+<!-- Producto 2 -->
+<article class="bg-surface rounded-DEFAULT p-sm shadow-sm flex items-center gap-md relative">
+<div class="w-24 h-24 shrink-0 rounded-DEFAULT overflow-hidden bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="Dije corazón pulido en plata ley 925 brillante sobre fondo neutro minimalista, toma cenital." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuhhmXni0k2X1GRz2N8A9qkLsx6YbYXOIYId4UoQw5HQOu02u0UeJ9Bex1LpdydCmuJcM22H_XC95dQra-13mOf7NfOPGU5iloK4uAWHcz3bEBep6wrIBP_FhKz1WjjpZE-8NNjWQ3iqZeRBu4zATxX1GbOAYRh8aqLKIed6H0-IoTCP7ag8LPGvULGEBWyC2XFrqYgmTqDsJGRQKbz2HjTpGC6zVGTQdAnZjY-DER"/>
+</div>
+<div class="flex flex-col flex-grow min-w-0 justify-between py-xs">
+<div>
+<div class="flex items-center gap-xs">
+<span class="font-label-sm text-[11px] text-tertiary font-semibold uppercase">Plata 925</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold px-1.5 py-0.5 rounded-full">Para regalar</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface truncate">Dije corazón</h3>
+<span class="font-price-md text-price-md font-semibold text-primary block pt-xs">$16.990</span>
+</div>
+<a class="mt-xs inline-flex items-center justify-center min-h-[44px] h-10 px-md rounded-full bg-surface-container text-primary font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" data-path="ficha-de-producto" href="#">
+            Ver producto
+          </a>
+</div>
+</article>
+<!-- Producto 3 -->
+<article class="bg-surface rounded-DEFAULT p-sm shadow-sm flex items-center gap-md">
+<div class="w-24 h-24 shrink-0 rounded-DEFAULT overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Pulsera de eslabones resistentes en plata ley 925 con broche clásico sobre fondo marfil." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUoWfU2p0FIGZAMaPT3HIMc59zI22JTUD48rMxdMga5MiAYD1ZfVRjOm9JF5sJe790CsOmRA5n47cEjwtoCi-2nU-2_9p5dS5IuDXAilnF52AeqYHC6ZPhzUwo9bB63zYaMmsJAuuGe5pHHrcPiVAKsb9DUrsRXsjCLlkj4d0FozdDxZhp_C5TZe9tbnOj0opCSiOE3bfVmxsI0-NaBjthRLST_IfsC44OK75I9vve"/>
+</div>
+<div class="flex flex-col flex-grow min-w-0 justify-between py-xs">
+<div>
+<span class="font-label-sm text-[11px] text-tertiary font-semibold uppercase">Plata 925</span>
+<h3 class="font-title-sm text-title-sm text-on-surface truncate">Pulsera eslabón</h3>
+<span class="font-price-md text-price-md font-semibold text-primary block pt-xs">$29.990</span>
+</div>
+<a class="mt-xs inline-flex items-center justify-center min-h-[44px] h-10 px-md rounded-full bg-surface-container text-primary font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" data-path="ficha-de-producto" href="#">
+            Ver producto
+          </a>
+</div>
+</article>
+<!-- Producto 4 -->
+<article class="bg-surface rounded-DEFAULT p-sm shadow-sm flex items-center gap-md">
+<div class="w-24 h-24 shrink-0 rounded-DEFAULT overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Argolla lisa de 3 mm en plata ley 925 esterlina con reflejo espejo impecable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAMlz6C9YJBkyIuuR4I4UD0Vvu6ZFynoPSvqrEy_-xFBm5on7Y57bRBYDnciNfIDG-8QHMe3f6ioxjdMtYRjHIHpHTAUJBrB0LGQTkM2rGLbR1u0w1LQgdEX5yJF9D6IJ79CsyYAXIP7fm5V5MndSH-5D_dSb12vy2EnnX62VWMijtke-Rp5ullw0sit5QmMOEevZ7fYHYBzsnrNclkEVQrf-Cl0yRhBx6mgIAl0J0"/>
+</div>
+<div class="flex flex-col flex-grow min-w-0 justify-between py-xs">
+<div>
+<span class="font-label-sm text-[11px] text-tertiary font-semibold uppercase">Plata 925</span>
+<h3 class="font-title-sm text-title-sm text-on-surface truncate">Argolla lisa 3 mm</h3>
+<span class="font-price-md text-price-md font-semibold text-primary block pt-xs">$19.990</span>
+</div>
+<a class="mt-xs inline-flex items-center justify-center min-h-[44px] h-10 px-md rounded-full bg-surface-container text-primary font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" data-path="ficha-de-producto" href="#">
+            Ver producto
+          </a>
+</div>
+</article>
+</div>
+</section>
+<!-- 12. Botón flotante button-whatsapp (por encima de la barra sticky) -->
+<a aria-label="Abrir WhatsApp soporte directo" class="fixed bottom-20 right-4 z-50 w-12 h-12 bg-success text-on-error rounded-full shadow-lg flex items-center justify-center hover:scale-105 active:scale-95 transition-transform" href="https://wa.me/56912345678?text=Hola,%20necesito%20ayuda%20con%20una%20joya">
+<span class="material-symbols-outlined text-[28px]">chat</span>
+</a>
+<!-- 11. Barra fija inferior persistente (Sticky bottom CTA) -->
+<aside class="fixed bottom-0 left-0 right-0 z-40 bg-surface px-gutter py-sm shadow-[0_-4px_16px_rgba(0,0,0,0.08)]">
+<div class="max-w-md mx-auto flex items-center gap-sm">
+<button class="w-full min-h-[48px] h-12 bg-primary hover:bg-primary-hover active:scale-[0.99] text-on-primary rounded-full font-label-md text-label-md flex items-center justify-center gap-xs shadow-md transition-all" id="add-to-cart-btn" onclick="addToCart()">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span id="btn-text">Agregar al carrito — $24.990</span>
+</button>
+</div>
+</aside>
+</div>
+<script>
+  let currentPrice = '$24.990';
+  let isSaved = false;
+
+  function switchPhoto(index) {
+    const dots = document.querySelectorAll('.gallery-dot');
+    const thumbs = document.querySelectorAll('.thumb-btn');
+    
+    dots.forEach((dot, i) => {
+      if (i === index) {
+        dot.classList.remove('bg-secondary', 'w-2', 'h-2');
+        dot.classList.add('bg-primary', 'w-2.5', 'h-2.5');
+      } else {
+        dot.classList.remove('bg-primary', 'w-2.5', 'h-2.5');
+        dot.classList.add('bg-secondary', 'w-2', 'h-2');
+      }
+    });
+
+    thumbs.forEach((thumb, i) => {
+      if (i === index) {
+        thumb.classList.remove('opacity-70');
+        thumb.classList.add('shadow-md');
+      } else {
+        thumb.classList.add('opacity-70');
+        thumb.classList.remove('shadow-md');
+      }
+    });
+  }
+
+  function selectLength(btn, length, description, price) {
+    document.querySelectorAll('.size-opt').forEach(b => {
+      b.classList.remove('bg-primary', 'text-on-primary', 'shadow-md');
+      b.classList.add('bg-surface', 'text-on-surface', 'shadow-sm');
+      const sub = b.querySelector('span:last-child');
+      if (sub) {
+        sub.classList.remove('text-on-primary/80');
+        sub.classList.add('text-on-surface-variant');
+      }
+    });
+
+    btn.classList.remove('bg-surface', 'text-on-surface', 'shadow-sm');
+    btn.classList.add('bg-primary', 'text-on-primary', 'shadow-md');
+    const activeSub = btn.querySelector('span:last-child');
+    if (activeSub) {
+      activeSub.classList.remove('text-on-surface-variant');
+      activeSub.classList.add('text-on-primary/80');
+    }
+
+    currentPrice = price;
+    document.getElementById('label-length').innerHTML = `Elige tu largo: <strong class="font-semibold text-primary">${length}</strong> (${description})`;
+    document.getElementById('spec-length').textContent = length;
+    document.getElementById('btn-text').textContent = `Agregar al carrito — ${price}`;
+  }
+
+  function toggleSave() {
+    isSaved = !isSaved;
+    const icon = document.getElementById('save-icon');
+    const text = document.getElementById('save-text');
+    const btn = document.getElementById('btn-save');
+
+    if (isSaved) {
+      icon.textContent = 'favorite';
+      icon.style.fontVariationSettings = "'FILL' 1";
+      text.textContent = 'Guardado';
+      btn.classList.add('text-error', 'bg-error-container/30');
+    } else {
+      icon.textContent = 'favorite_border';
+      icon.style.fontVariationSettings = "'FILL' 0";
+      text.textContent = 'Guardar';
+      btn.classList.remove('text-error', 'bg-error-container/30');
+    }
+  }
+
+  function addToCart() {
+    const btn = document.getElementById('add-to-cart-btn');
+    const text = document.getElementById('btn-text');
+    const prevText = text.textContent;
+
+    btn.disabled = true;
+    text.textContent = '¡Agregado con éxito!';
+    btn.classList.remove('bg-primary');
+    btn.classList.add('bg-success');
+
+    setTimeout(() => {
+      text.textContent = prevText;
+      btn.classList.remove('bg-success');
+      btn.classList.add('bg-primary');
+      btn.disabled = false;
+    }, 2000);
+  }
+</script></main><footer class="bg-primary text-on-primary mt-2xl pt-xl pb-safe px-margin"><div class="flex flex-col gap-xl max-w-sm mx-auto"><div class="flex flex-col gap-xs"><span class="font-headline-md text-headline-md text-on-primary">Joyas Kofran</span><p class="font-body-sm text-body-sm text-on-primary/80">Elegancia y nobleza en plata ley 925 legítima, creada con dedicación artesanal chilena.</p></div><div class="flex flex-col gap-sm"><span class="font-label-md text-label-md text-tertiary-fixed-dim uppercase tracking-wider">Garantía y Confianza</span><div class="flex items-start gap-xs text-on-primary/90"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim mt-0.5">shield</span><p class="font-body-sm text-body-sm">Certificación de autenticidad en cada pieza. Garantía total de 6 meses por fallas de fabricación.</p></div></div><div class="flex flex-col gap-sm"><span class="font-label-md text-label-md text-tertiary-fixed-dim uppercase tracking-wider">Atención Directa</span><a class="inline-flex items-center justify-center gap-xs bg-success text-on-error py-sm px-md rounded-full font-label-md text-label-md hover:bg-success/90 transition-colors" href="https://wa.me/56912345678"><span class="material-symbols-outlined text-[20px]">chat</span><span>WhatsApp +56 9 XXXX XXXX</span></a></div><div class="flex flex-col gap-sm"><span class="font-label-md text-label-md text-tertiary-fixed-dim uppercase tracking-wider">Navegación</span><ul class="flex flex-col gap-xs font-body-sm text-body-sm text-on-primary/90"><li><a class="hover:text-tertiary-fixed-dim transition-colors py-xs inline-block" data-path="tienda-catalogo" href="#">Catálogo General</a></li><li><a class="hover:text-tertiary-fixed-dim transition-colors py-xs inline-block" data-path="guia-de-tallas" href="#">Guía de Tallas y Medidas</a></li><li><a class="hover:text-tertiary-fixed-dim transition-colors py-xs inline-block" data-path="cuidado-de-joyas" href="#">Cuidado de la Plata 925</a></li><li><a class="hover:text-tertiary-fixed-dim transition-colors py-xs inline-block" data-path="politicas-despacho" href="#">Políticas de Despacho</a></li></ul></div><div class="flex flex-col gap-sm pt-sm"><span class="font-label-sm text-label-sm text-on-primary/70 uppercase tracking-wider">Medios de Pago Seguros</span><div class="flex flex-wrap gap-xs font-body-sm text-body-sm"><span class="bg-primary-hover px-sm py-xs rounded text-on-primary font-medium text-[12px]">Webpay Plus</span><span class="bg-primary-hover px-sm py-xs rounded text-on-primary font-medium text-[12px]">Transferencia Bancaria</span></div></div><div class="pt-md pb-lg text-center font-body-sm text-body-sm text-on-primary/60"><p>© 2024 Joyas Kofran. Todos los derechos reservados.</p></div></div></footer></body></html>

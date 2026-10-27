@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;overflow-x:hidden;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container-highest": "#e4e2df", "on-tertiary": "#FFFFFF", "surface-container": "#efeeeb", "on-secondary": "#1C1C1E", "secondary-fixed-dim": "#c3c7cd", "on-error": "#ffffff", "disabled": "#D6D6D6", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#eab26d", "inverse-on-surface": "#f2f0ed", "outline": "#72777f", "surface-container-low": "#f5f3f0", "on-primary": "#ffffff", "secondary-container": "#dfe3e9", "background": "#fbf9f6", "surface-bright": "#fbf9f6", "error-container": "#ffdad6", "on-surface-variant": "#5C5C5C", "tertiary-container": "#6b4305", "on-tertiary-fixed": "#2a1700", "inverse-surface": "#30312f", "tertiary": "#8C5F22", "on-secondary-fixed": "#171c20", "primary": "#1F4E79", "surface-variant": "#e4e2df", "inverse-primary": "#a0cafc", "error": "#B3261E", "on-primary-container": "#95bff1", "primary-container": "#1f4e79", "primary-fixed-dim": "#a0cafc", "surface-dim": "#dbdad7", "surface-container-high": "#eae8e5", "tertiary-fixed-dim": "#f6bc76", "secondary": "#C9CDD3", "tertiary-hover": "#6F4A1A", "primary-fixed": "#d1e4ff", "on-tertiary-fixed-variant": "#653e01", "on-surface": "#1C1C1E", "neutral": "#FAF8F5", "on-primary-fixed-variant": "#184974", "surface": "#FFFFFF", "on-secondary-container": "#60656a", "on-background": "#1b1c1a", "on-disabled": "#4A4A4A", "surface-tint": "#35618d", "on-primary-fixed": "#001d35", "outline-variant": "#c2c7d0", "on-error-container": "#93000a", "tertiary-fixed": "#ffddb8", "primary-hover": "#183E60", "on-secondary-fixed-variant": "#43474c", "success": "#2E7D4F", "secondary-fixed": "#dfe3e9" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-2xl": "48px", "space-sm": "8px", "space-3xl": "64px", "lg": "24px", "margin": "24px", "md": "16px", "xs": "4px", "3xl": "64px", "space-xs": "4px", "space-xl": "32px", "sm": "8px", "space-lg": "24px", "2xl": "48px", "space-md": "16px", "gutter": "16px", "xl": "32px" }, fontFamily: { "headline-display-mobile": ["Cormorant Garamond"], "body-md": ["Inter"], "headline-md": ["Cormorant Garamond"], "title-sm": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"], "price-md": ["Inter"], "headline-display": ["Cormorant Garamond"], "body-sm": ["Inter"], "headline-md-mobile": ["Cormorant Garamond"], "headline-lg": ["Cormorant Garamond"], "headline-lg-mobile": ["Cormorant Garamond"] }, fontSize: { "headline-display-mobile": ["32px", { lineHeight: "1.1", fontWeight: "600" }], "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }], "headline-md": ["24px", { lineHeight: "1.25", fontWeight: "600" }], "title-sm": ["16px", { lineHeight: "1.4", fontWeight: "600" }], "label-md": ["16px", { lineHeight: "1", letterSpacing: "0.5px", fontWeight: "600" }], "label-sm": ["13px", { lineHeight: "1", letterSpacing: "0.5px", fontWeight: "600" }], "price-md": ["18px", { lineHeight: "1.3", fontWeight: "600" }], "headline-display": ["48px", { lineHeight: "1.1", fontWeight: "600" }], "body-sm": ["14px", { lineHeight: "1.5", fontWeight: "400" }], "headline-md-mobile": ["20px", { lineHeight: "1.25", fontWeight: "600" }], "headline-lg": ["36px", { lineHeight: "1.2", fontWeight: "600" }], "headline-lg-mobile": ["26px", { lineHeight: "1.2", fontWeight: "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-on-surface antialiased overflow-x-hidden flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 pt-safe bg-primary shadow-[0_4px_12px_rgba(31,78,121,0.12)]"><div class="bg-secondary px-gutter py-1 flex items-center justify-center gap-1.5"><span class="material-symbols-outlined text-[15px] text-on-secondary">verified</span><span class="font-label-sm text-label-sm text-on-secondary tracking-wide uppercase">Plata ley 925 certificada</span></div><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-2"><button aria-label="Volver" class="w-11 h-11 -ml-2 flex items-center justify-center text-on-primary hover:text-primary-fixed transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span></button><h1 class="font-headline-md-mobile text-headline-md-mobile text-on-primary tracking-tight truncate max-w-[190px]">Blog De Joyeria</h1></div><div class="flex items-center gap-1"><a aria-label="Ver carrito de compras" class="relative w-11 h-11 flex items-center justify-center text-on-primary hover:text-primary-fixed transition-colors" data-path="carrito" href="#"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="absolute top-2 right-1.5 min-w-[18px] h-[18px] px-1 bg-tertiary text-on-tertiary rounded-full font-label-sm text-[10px] leading-tight flex items-center justify-center font-bold">2</span></a><div class="w-8 h-8 rounded-full bg-primary-hover flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full pt-[92px] bg-background relative flex flex-col pb-safe"><div class="flex flex-col w-full">
+<!-- Cabecera de contenido del Blog -->
+<section class="px-gutter pt-space-lg pb-space-sm flex flex-col gap-2.5">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container rounded-full w-fit">
+<span class="material-symbols-outlined text-tertiary text-[18px]">menu_book</span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Guías y Consejos</span>
+</div>
+<h1 class="font-headline-display-mobile text-headline-display-mobile text-on-surface tracking-tight">Blog</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      Consejos para cuidar tu plata, elegir bien y regalar
+    </p>
+</section>
+<!-- Fila de chip-filter con scroll horizontal -->
+<section class="w-full py-space-sm">
+<div class="flex items-center gap-2 overflow-x-auto px-gutter scroll-smooth" style="scrollbar-width: none; -ms-overflow-style: none;">
+<!-- Chip Activo: Todos -->
+<button aria-pressed="true" class="flex-shrink-0 h-[44px] px-4 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center transition-all shadow-sm active:scale-95">
+        Todos
+      </button>
+<!-- Chip: Cuidado y duración -->
+<button class="flex-shrink-0 h-[44px] px-4 rounded-full bg-surface text-on-surface font-label-md text-label-md flex items-center justify-center transition-all hover:bg-surface-container active:scale-95 shadow-sm">
+        Cuidado y duración de la plata
+      </button>
+<!-- Chip: Cómo elegir bien -->
+<button class="flex-shrink-0 h-[44px] px-4 rounded-full bg-surface text-on-surface font-label-md text-label-md flex items-center justify-center transition-all hover:bg-surface-container active:scale-95 shadow-sm">
+        Cómo elegir bien
+      </button>
+<!-- Chip: Regalos e ideas -->
+<button class="flex-shrink-0 h-[44px] px-4 rounded-full bg-surface text-on-surface font-label-md text-label-md flex items-center justify-center transition-all hover:bg-surface-container active:scale-95 shadow-sm">
+        Regalos e ideas
+      </button>
+</div>
+</section>
+<!-- Contenedor central de Artículos -->
+<div class="px-gutter flex flex-col gap-space-xl mt-space-sm">
+<!-- Artículo Destacado -->
+<article class="bg-surface rounded-DEFAULT overflow-hidden shadow-sm flex flex-col">
+<div class="relative w-full aspect-video overflow-hidden bg-surface-container">
+<img alt="Limpiando cadena de plata 925" class="w-full h-full object-cover" data-alt="Close-up macro shot of artisan hands gently polishing a shining 925 sterling silver chain necklace with a soft microfiber jewelry cloth on a minimalist neutral ivory table with gentle warm daylight reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9qT9dX5TF-MC5hoUMH9ZxQT2v_-JtIno-AjBOkZuFoN9H6BUf9FMaVospsCk6mgFwVElSlCcaHuYVi6_jZF5O2CRkY75p8IGhkSzN3yro74ajAiagpCgSUij1oxnUfbb3EqlrzFk0ugm15UueMkt8wXGUO2s1eePi892Vwg2-KYuxqmGolaoQa5eL4boIs2ByXLABOxC3FQ5x428Y75b3ubmdsJDaO6sNRTMyKuqwZ-1JYbQAvyGPKg"/>
+<span class="absolute top-3 left-3 bg-tertiary text-on-tertiary font-label-sm text-label-sm px-2.5 py-1 rounded-full shadow-sm flex items-center gap-1 font-semibold">
+          ★ Destacado
+        </span>
+</div>
+<div class="p-gutter flex flex-col gap-3">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider font-semibold">
+          CUIDADO Y DURACIÓN DE LA PLATA · Lectura: 4 min · 12 de marzo de 2025
+        </span>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">
+          Por qué se oscurece la plata 925 y cómo limpiarla en casa sin dañarla
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          La plata maciza reacciona de forma natural con el azufre del ambiente. Te contamos el método casero seguro con bicarbonato y agua tibia, sin rayar tus piezas ni quitarles su brillo original.
+        </p>
+<!-- Indicador de piezas -->
+<div class="flex items-center gap-2 p-3 bg-surface-container-low rounded-DEFAULT text-on-surface">
+<span class="material-symbols-outlined text-[20px] text-tertiary">diamond</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+            Piezas relacionadas: <strong class="text-on-surface font-semibold">Cadenas finas y collares de uso diario</strong>
+</span>
+</div>
+<a class="mt-2 w-full h-[48px] rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-primary-hover active:scale-[0.99] transition-all shadow-sm" href="#">
+<span>Leer artículo</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Sección Guías recomendadas -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md text-on-surface">
+          Guías recomendadas
+        </h2>
+<span class="material-symbols-outlined text-primary text-[22px]">auto_stories</span>
+</div>
+<!-- Tarjeta 1: Medición de dedo -->
+<article class="bg-surface rounded-DEFAULT overflow-hidden shadow-sm flex flex-col">
+<div class="relative w-full aspect-video overflow-hidden bg-surface-container">
+<img alt="Cómo medir la talla de anillo en casa" class="w-full h-full object-cover" data-alt="Editorial overhead aesthetic photography of a person measuring ring size using a sleek paper strip and metal ruler next to a lustrous sterling silver band ring on a warm beige textured stone background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-_ho2taRXVBRT40Jl7brvoT5vFYR_RenzOydzFT89f2aLd5Rqy3CD6yk_IAMDCBFnkTI4SUm9RezApCYf9jjsuOc8NHqHaWKRS-j6VADaoJgG4HFT2qMd-vGK6Ad2VAcxKfv_3AJpWwq3Pi_CqZXkcMRMmF3d32XS1MV4s6obnEW6SUVHvj0MrWLgU-FCZM5-zSt-ilFKphtvmkPDa6TM0vZSSEfjUIPYCQ33SBQ0r8rdqszNWHGcTg"/>
+<span class="absolute top-3 left-3 bg-surface-container-highest/90 text-on-surface font-label-sm text-label-sm px-2.5 py-1 rounded-full backdrop-blur-sm font-semibold">
+            Tallas &amp; Medidas
+          </span>
+</div>
+<div class="p-gutter flex flex-col gap-2.5">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-tertiary">straighten</span>
+<span>Cómo elegir bien · 5 min</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold leading-snug">
+            Cómo medir tu dedo en casa y no equivocarte con la talla
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Aprende el truco de la huincha y la regla para dar con tu medida exacta antes de comprar tu argolla online.
+          </p>
+<a class="mt-1 h-[44px] inline-flex items-center gap-2 text-primary font-label-md text-label-md hover:text-primary-hover active:translate-x-1 transition-all w-fit" href="#">
+<span class="font-semibold">Leer artículo</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Tarjeta 2: Regalos de plata según presupuesto -->
+<article class="bg-surface rounded-DEFAULT overflow-hidden shadow-sm flex flex-col">
+<div class="relative w-full aspect-video overflow-hidden bg-surface-container">
+<img alt="Regalos de joyería en plata 925 para ocasiones especiales" class="w-full h-full object-cover" data-alt="Luxury still life of an open elegant navy blue jewelry gift box revealing a delicate 925 sterling silver heart pendant nestled on cream velvet with warm diffused romantic light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA77iQF2ITDgN3tR_GqqxLo3ZPbhvjA5imq-4RKCKY9tQk3DQYfWwApLYth79SMzoEycIikbiJhBdcInTWFcK_4MUzuTzBGu4vU--cu6E8h0dNtfV8PXrQlXRkiqdmv_vvctev-DAlieKswMLsNbU_mSW3FPaI_qRYECb7enWZLxqmxMbBjJE5OMYbeK6wi7GJG8zauz1MzWrU29S_F18x6HEY-b01NvgIUbDwYcZhwkjqeQ069SqpL-Q"/>
+<span class="absolute top-3 left-3 bg-surface-container-highest/90 text-on-surface font-label-sm text-label-sm px-2.5 py-1 rounded-full backdrop-blur-sm font-semibold">
+            Especial Regalos
+          </span>
+</div>
+<div class="p-gutter flex flex-col gap-2.5">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-tertiary">featured_seasonal_and_gifts</span>
+<span>Regalos e ideas · 4 min</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold leading-snug">
+            Regalos de plata 925 según tu presupuesto: desde $20.000 hasta $60.000
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Opciones delicadas y duraderas para sorprender sin pasarte de tu presupuesto: aros clásicos, dijes y cadenas para regalar.
+          </p>
+<a class="mt-1 h-[44px] inline-flex items-center gap-2 text-primary font-label-md text-label-md hover:text-primary-hover active:translate-x-1 transition-all w-fit" href="#">
+<span class="font-semibold">Leer artículo</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Tarjeta 3: Largo de cadena según escote -->
+<article class="bg-surface rounded-DEFAULT overflow-hidden shadow-sm flex flex-col">
+<div class="relative w-full aspect-video overflow-hidden bg-surface-container">
+<img alt="Largo de cadena de plata según escote" class="w-full h-full object-cover" data-alt="Editorial lifestyle close portrait of a graceful woman wearing a minimalist layered sterling silver necklace resting elegantly along her collarbone and linen neckline bathed in golden hour warmth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4K9RiCaWyis4fWB2pbctnfB4bbYSDaVtyuwktgLqYiOS8SmbO1K5NW8-T5J-z7vwCF_B70ScRV5KYKNsrhTfK2APDfHD9WVmIVPKgcDQ-JaxrfXFR7jZyLsAp3j7rw-s7sPayNSKPg_bCQil2LVvngs2I885a3ZysYml07sLUjsKUD2mjdaTcfWmewMV-eIQT6p1GC4ydXQ6A08YCiumrHDJREm5s5kizj5FhI6kGWvFVgaEfWqnz-w"/>
+<span class="absolute top-3 left-3 bg-surface-container-highest/90 text-on-surface font-label-sm text-label-sm px-2.5 py-1 rounded-full backdrop-blur-sm font-semibold">
+            Guía de Estilo
+          </span>
+</div>
+<div class="p-gutter flex flex-col gap-2.5">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-tertiary">style</span>
+<span>Cómo elegir bien · 3 min</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold leading-snug">
+            Qué largo de cadena te conviene según tu escote
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Gargantilla de 40 cm, clásica de 45 cm o caída de 50 cm: descubre qué largo favorece cada tipo de blusa y cuello.
+          </p>
+<a class="mt-1 h-[44px] inline-flex items-center gap-2 text-primary font-label-md text-label-md hover:text-primary-hover active:translate-x-1 transition-all w-fit" href="#">
+<span class="font-semibold">Leer artículo</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</article>
+</section>
+</div>
+<!-- lead-form a ancho completo -->
+<section class="mt-space-xl w-full px-gutter">
+<div class="w-full bg-primary text-on-primary rounded-DEFAULT p-gutter flex flex-col gap-4 shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[24px] text-tertiary-fixed">mail</span>
+<h3 class="font-headline-md text-headline-md text-on-primary leading-tight">
+          Recibe los consejos nuevos en tu correo
+        </h3>
+</div>
+<p class="font-body-md text-body-md text-on-primary-container leading-relaxed">
+        Guías prácticas para el cuidado de tus joyas y recordatorios de fechas especiales, sin spam.
+      </p>
+<form class="flex flex-col gap-3 mt-1" onsubmit="event.preventDefault(); document.getElementById('newsletter-success').classList.remove('hidden'); this.classList.add('hidden');">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-primary-fixed uppercase tracking-wider font-semibold" for="newsletter-email">
+            Correo electrónico
+          </label>
+<div class="relative w-full">
+<input class="w-full h-[48px] px-4 rounded-DEFAULT bg-surface text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-tertiary transition-all" id="newsletter-email" placeholder="tu.correo@ejemplo.cl" required="" type="email"/>
+</div>
+</div>
+<button class="w-full h-[48px] rounded-full bg-surface text-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-2 hover:bg-surface-container active:scale-[0.99] transition-all shadow-sm mt-1" type="submit">
+<span>Suscribirme</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<p class="font-body-sm text-body-sm text-on-primary-container text-center pt-1">
+          Puedes cancelar tu suscripción en cualquier momento.
+        </p>
+</form>
+<div class="hidden p-4 bg-primary-hover rounded-DEFAULT flex items-center gap-3 text-on-primary" id="newsletter-success">
+<span class="material-symbols-outlined text-success text-[26px]">check_circle</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-primary font-semibold">¡Te has suscrito con éxito!</span>
+<span class="font-body-sm text-body-sm text-on-primary-container">Pronto recibirás nuestras mejores recomendaciones de joyería.</span>
+</div>
+</div>
+</div>
+</section>
+</div><footer class="w-full bg-primary text-on-primary mt-space-2xl px-gutter pt-space-xl pb-12 flex flex-col gap-space-lg"><div class="flex flex-col gap-2"><h2 class="font-headline-md text-headline-md text-on-primary">Joyas Kofran</h2><p class="font-body-sm text-body-sm text-on-primary-container leading-relaxed">Joyería fina en plata de ley 925 con certificación auténtica. Diseños clásicos y contemporáneos pensados para perdurar.</p><div class="flex items-center gap-2 mt-1 py-1.5 px-3 bg-primary-hover/50 rounded-full w-fit"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed">verified</span><span class="font-label-sm text-label-sm text-on-primary">Certificación Ley 925 Garantizada</span></div></div><div class="flex flex-col gap-3"><h3 class="font-title-sm text-title-sm text-on-primary tracking-wide uppercase border-b border-primary-hover pb-1.5">Navegación</h3><ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-primary-container"><li><a class="hover:text-on-primary transition-colors py-1 block" data-path="catalogo-de-joyas" href="#">Tienda</a></li><li><a class="hover:text-on-primary transition-colors py-1 block" data-path="blog-de-joyeria" href="#">Blog</a></li><li><a class="hover:text-on-primary transition-colors py-1 block" data-path="contacto" href="#">Contacto</a></li><li><a class="hover:text-on-primary transition-colors py-1 block" data-path="preguntas-frecuentes" href="#">Preguntas frecuentes</a></li></ul></div><div class="flex flex-col gap-3"><h3 class="font-title-sm text-title-sm text-on-primary tracking-wide uppercase border-b border-primary-hover pb-1.5">Servicio y Garantía</h3><ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-primary-container"><li><a class="hover:text-on-primary transition-colors py-1 block" data-path="garantia-de-satisfaccion" href="#">Garantía de Satisfacción</a></li><li><a class="hover:text-on-primary transition-colors py-1 block" data-path="guia-de-tallas" href="#">Guía de Tallas</a></li><li><a class="hover:text-on-primary transition-colors py-1 block" data-path="despacho-y-cambios" href="#">Despacho y Cambios</a></li></ul></div><div class="flex flex-col gap-3"><h3 class="font-title-sm text-title-sm text-on-primary tracking-wide uppercase border-b border-primary-hover pb-1.5">Compra Protegida</h3><p class="font-body-sm text-body-sm text-on-primary-container">Aceptamos únicamente medios de pago seguros y verificados:</p><div class="flex flex-col gap-2 font-body-sm text-body-sm text-on-primary"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[20px] text-tertiary-fixed">lock</span><span>Webpay Plus</span></div><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[20px] text-tertiary-fixed">account_balance</span><span>Transferencia Bancaria</span></div></div></div><div class="flex flex-col gap-2 bg-primary-hover/40 p-space-md rounded-DEFAULT"><span class="font-title-sm text-title-sm text-on-primary">Atención directa WhatsApp</span><a class="font-price-md text-price-md text-tertiary-fixed hover:underline flex items-center gap-2" href="https://wa.me/56900000000"><span>+56 9 XXXX XXXX</span></a></div><div class="pt-space-md border-t border-primary-hover/50 text-center"><p class="font-body-sm text-[12px] text-on-primary-container leading-normal">© 2025 Joyas Kofran. Joyería en plata ley 925 certificada. Chile.</p></div></footer></main><a aria-label="Consultar por WhatsApp" class="fixed bottom-6 right-4 z-50 min-h-[44px] px-4 py-2.5 bg-success text-on-primary rounded-full shadow-[0_4px_12px_rgba(31,78,121,0.12)] flex items-center gap-2 font-label-md text-label-md active:scale-95 transition-transform" href="https://wa.me/56900000000" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[22px]">chat</span><span>WhatsApp</span></a></body></html>

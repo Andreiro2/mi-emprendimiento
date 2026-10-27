@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tienda — Joyas Kofran</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    /* CSS Reset & Variables */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    :root {
+      --primary: #1F4E79;
+      --primary-hover: #183E60;
+      --on-primary: #FFFFFF;
+      --secondary: #C9CDD3;
+      --on-secondary: #1C1C1E;
+      --tertiary: #8C5F22;
+      --tertiary-hover: #6F4A1A;
+      --on-tertiary: #FFFFFF;
+      --neutral: #FAF8F5;
+      --surface: #FFFFFF;
+      --on-surface: #1C1C1E;
+      --on-surface-variant: #5C5C5C;
+      --disabled: #D6D6D6;
+      --on-disabled: #4A4A4A;
+      --success: #2E7D4F;
+      --error: #B3261E;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-full: 9999px;
+      --shadow-subtle: 0 4px 14px rgba(31, 78, 121, 0.08);
+      --shadow-hover: 0 8px 24px rgba(31, 78, 121, 0.12);
+    }
+    body {
+      background-color: var(--neutral);
+      color: var(--on-surface);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* 1. Trust Bar */
+    .trust-bar {
+      background-color: var(--secondary);
+      color: var(--on-secondary);
+      font-size: 13px;
+      font-weight: 500;
+      text-align: center;
+      padding: 8px 24px;
+      letter-spacing: 0.2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+    .trust-bar span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .trust-bar .sep {
+      opacity: 0.4;
+    }
+
+    /* 2. Navbar */
+    .navbar {
+      background-color: var(--primary);
+      color: var(--on-primary);
+      height: 74px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    }
+    .navbar-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 100%;
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--on-primary);
+    }
+    .brand-logo svg {
+      width: 28px;
+      height: 28px;
+      fill: none;
+      stroke: #FFFFFF;
+      stroke-width: 1.6;
+    }
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-link {
+      font-size: 15px;
+      font-weight: 600;
+      color: #E2E8F0;
+      position: relative;
+      padding: 6px 0;
+      transition: color 0.2s ease;
+      letter-spacing: 0.3px;
+    }
+    .nav-link:hover {
+      color: #FFFFFF;
+    }
+    .nav-link.active {
+      color: #FFFFFF;
+      font-weight: 700;
+    }
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 2.5px;
+      background-color: #FFFFFF;
+      border-radius: var(--radius-full);
+    }
+    .navbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .nav-search {
+      position: relative;
+      width: 320px;
+    }
+    .nav-search input {
+      width: 100%;
+      height: 42px;
+      background: #FFFFFF;
+      border: 1px solid transparent;
+      border-radius: var(--radius-full);
+      padding: 0 16px 0 40px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--on-surface);
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .nav-search input:focus {
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(255,255,255,0.25);
+    }
+    .nav-search svg {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 17px;
+      height: 17px;
+      stroke: var(--on-surface-variant);
+      stroke-width: 2;
+      pointer-events: none;
+    }
+    .cart-btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-full);
+      background: rgba(255,255,255,0.1);
+      color: #FFFFFF;
+      transition: background 0.2s ease;
+    }
+    .cart-btn:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    .cart-btn svg {
+      width: 21px;
+      height: 21px;
+      stroke: #FFFFFF;
+      stroke-width: 1.8;
+      fill: none;
+    }
+    .cart-badge {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      background-color: var(--tertiary);
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 700;
+      width: 18px;
+      height: 18px;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--primary);
+    }
+
+    /* Layout Wrapper */
+    .main-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 36px 32px 72px;
+    }
+
+    /* Page Header */
+    .page-header {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .page-title {
+      font-family: var(--font-display);
+      font-size: 44px;
+      font-weight: 600;
+      color: var(--primary);
+      line-height: 1.1;
+    }
+    .page-subtitle {
+      font-size: 15px;
+      color: var(--on-surface-variant);
+      margin-top: 4px;
+    }
+    .search-wrapper-center {
+      max-width: 580px;
+      width: 100%;
+      position: relative;
+    }
+    .search-wrapper-center input {
+      width: 100%;
+      height: 48px;
+      background: var(--surface);
+      border: 1px solid var(--secondary);
+      border-radius: var(--radius-full);
+      padding: 0 20px 0 46px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--on-surface);
+      outline: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }
+    .search-wrapper-center input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(31, 78, 121, 0.12);
+    }
+    .search-wrapper-center svg {
+      position: absolute;
+      left: 17px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 19px;
+      height: 19px;
+      stroke: var(--primary);
+      stroke-width: 2;
+      pointer-events: none;
+    }
+
+    /* Chips & Sort Row */
+    .filters-nav-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0 24px;
+      border-bottom: 1px solid var(--secondary);
+      gap: 24px;
+    }
+    .chip-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .chip-filter {
+      display: inline-flex;
+      align-items: center;
+      height: 40px;
+      padding: 0 20px;
+      border-radius: var(--radius-full);
+      background-color: var(--surface);
+      color: var(--on-surface);
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid var(--secondary);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .chip-filter:hover {
+      background-color: #F1F4F8;
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+    .chip-filter.active {
+      background-color: var(--primary);
+      color: var(--on-primary);
+      border-color: var(--primary);
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(31, 78, 121, 0.2);
+    }
+    .sort-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+    }
+    .sort-label {
+      font-size: 14px;
+      color: var(--on-surface-variant);
+      font-weight: 500;
+    }
+    .sort-select {
+      background-color: var(--surface);
+      border: 1px solid var(--secondary);
+      border-radius: var(--radius-full);
+      padding: 8px 36px 8px 16px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary);
+      cursor: pointer;
+      outline: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231F4E79' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      transition: border-color 0.2s ease;
+    }
+    .sort-select:focus {
+      border-color: var(--primary);
+    }
+
+    /* Content Layout (Sidebar + Grid) */
+    .catalog-layout {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 36px;
+      margin-top: 32px;
+      align-items: start;
+    }
+
+    /* Sidebar Filters (240px) */
+    .filter-sidebar {
+      background: var(--surface);
+      border: 1px solid var(--secondary);
+      border-radius: var(--radius-md);
+      padding: 24px 20px;
+      box-shadow: var(--shadow-subtle);
+      position: sticky;
+      top: 96px;
+    }
+    .filter-section {
+      padding-bottom: 22px;
+      margin-bottom: 22px;
+      border-bottom: 1px solid #ECEFF2;
+    }
+    .filter-section:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+    .filter-title {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--primary);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .filter-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .filter-item label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--on-surface);
+      cursor: pointer;
+      user-select: none;
+      transition: color 0.15s ease;
+    }
+    .filter-item label:hover {
+      color: var(--primary);
+    }
+    .filter-item input[type="radio"],
+    .filter-item input[type="checkbox"] {
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border: 1.5px solid var(--secondary);
+      border-radius: 4px;
+      background: #FFFFFF;
+      cursor: pointer;
+      outline: none;
+      display: grid;
+      place-content: center;
+      transition: all 0.2s ease;
+    }
+    .filter-item input[type="radio"] {
+      border-radius: 50%;
+    }
+    .filter-item input[type="checkbox"]:checked,
+    .filter-item input[type="radio"]:checked {
+      background-color: var(--primary);
+      border-color: var(--primary);
+    }
+    .filter-item input[type="checkbox"]:checked::before {
+      content: "";
+      width: 9px;
+      height: 5px;
+      border-left: 2px solid white;
+      border-bottom: 2px solid white;
+      transform: rotate(-45deg) translate(1px, -1px);
+    }
+    .filter-item input[type="radio"]:checked::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: white;
+    }
+    .filter-item.active-tag label {
+      font-weight: 600;
+      color: var(--primary);
+    }
+    .filter-item .count {
+      margin-left: auto;
+      font-size: 12px;
+      color: var(--on-surface-variant);
+    }
+    .filter-clear-btn {
+      display: inline-block;
+      font-size: 12px;
+      color: var(--tertiary);
+      font-weight: 600;
+      text-decoration: underline;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    /* Product Grid & Active Filters Bar */
+    .catalog-main {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .active-feedback-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #FFFFFF;
+      border: 1px solid var(--secondary);
+      border-radius: var(--radius-md);
+      padding: 12px 18px;
+      font-size: 14px;
+    }
+    .results-count {
+      color: var(--on-surface-variant);
+    }
+    .results-count strong {
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .applied-tags {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pill-applied {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #EEF3F7;
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(31, 78, 121, 0.15);
+    }
+    .pill-applied svg {
+      width: 12px;
+      height: 12px;
+      stroke: var(--primary);
+      cursor: pointer;
+    }
+
+    /* Product Cards (3 columns) */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .card-product {
+      background: var(--surface);
+      border: 1px solid var(--secondary);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      position: relative;
+    }
+    .card-product:hover:not(.card-product-disabled) {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--primary);
+    }
+    .card-image-box {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background-color: #FFFFFF;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #F0F2F5;
+      margin-bottom: 14px;
+    }
+    .card-image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .card-product:hover:not(.card-product-disabled) .card-image-box img {
+      transform: scale(1.04);
+    }
+    .tag-925 {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: var(--tertiary);
+      color: var(--on-tertiary);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      z-index: 2;
+    }
+    .tag-metal {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background-color: rgba(255,255,255,0.92);
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--secondary);
+      z-index: 2;
+    }
+    .card-info {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .piece-type {
+      font-size: 13px;
+      color: var(--on-surface-variant);
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--on-surface);
+      line-height: 1.35;
+      margin-bottom: 8px;
+      min-height: 44px;
+    }
+    .card-price-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-top: auto;
+      margin-bottom: 16px;
+      padding-top: 8px;
+      border-top: 1px dashed #E2E8F0;
+    }
+    .price {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--tertiary);
+      letter-spacing: -0.2px;
+    }
+    .guarantee-micro {
+      font-size: 12px;
+      color: var(--success);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+    .btn-secondary {
+      width: 100%;
+      height: 44px;
+      background-color: var(--surface);
+      color: var(--primary);
+      border: 1.5px solid var(--primary);
+      border-radius: var(--radius-full);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      gap: 8px;
+    }
+    .btn-secondary:hover {
+      background-color: var(--primary);
+      color: var(--on-primary);
+      box-shadow: 0 4px 12px rgba(31, 78, 121, 0.2);
+    }
+
+    /* Disabled Product Card (Agotado) */
+    .card-product-disabled {
+      background-color: #F8F9FA;
+      border-color: #E2E8F0;
+    }
+    .card-product-disabled .card-image-box {
+      filter: grayscale(100%);
+      opacity: 0.65;
+    }
+    .card-product-disabled .tag-925 {
+      background-color: #718096;
+    }
+    .badge-agotado {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(28, 28, 30, 0.85);
+      color: #FFFFFF;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: var(--radius-sm);
+      z-index: 3;
+    }
+    .card-product-disabled .card-title {
+      color: var(--on-surface-variant);
+    }
+    .card-product-disabled .price {
+      color: var(--on-surface-variant);
+    }
+    .card-product-disabled .btn-secondary {
+      background-color: var(--disabled);
+      color: var(--on-disabled);
+      border-color: transparent;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    /* 6. Pagination */
+    .pagination-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--secondary);
+    }
+    .page-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--primary);
+      background: var(--surface);
+      border: 1px solid var(--secondary);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .page-btn:hover:not(.active) {
+      background-color: #EEF3F7;
+      border-color: var(--primary);
+    }
+    .page-btn.active {
+      background-color: var(--primary);
+      color: var(--on-primary);
+      border-color: var(--primary);
+      box-shadow: 0 2px 8px rgba(31, 78, 121, 0.25);
+    }
+
+    /* 7. Footer */
+    .footer {
+      background-color: var(--primary);
+      color: var(--on-primary);
+      padding: 56px 32px 32px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: 64px;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 40px;
+    }
+    .footer-col h4 {
+      font-family: var(--font-display);
+      font-size: 21px;
+      font-weight: 600;
+      margin-bottom: 18px;
+      color: #FFFFFF;
+      letter-spacing: 0.3px;
+    }
+    .footer-col p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #CBD5E1;
+      margin-bottom: 16px;
+    }
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-col ul li a {
+      font-size: 14px;
+      color: #CBD5E1;
+      transition: color 0.15s ease;
+    }
+    .footer-col ul li a:hover {
+      color: #FFFFFF;
+      text-decoration: underline;
+    }
+    .whatsapp-badge-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.08);
+      padding: 10px 14px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+    .whatsapp-badge-box svg {
+      width: 20px;
+      height: 20px;
+      fill: #25D366;
+    }
+    .payment-tags {
+      display: flex;
+      gap: 8px;
+      font-size: 12px;
+      color: #CBD5E1;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+    .payment-badge {
+      background: rgba(255,255,255,0.1);
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+    }
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 44px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: #94A3B8;
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background-color: var(--success);
+      color: var(--on-primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 6px 20px rgba(46, 125, 79, 0.35);
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 600;
+      z-index: 999;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+      text-decoration: none;
+    }
+    .floating-whatsapp:hover {
+      background-color: #266b43;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(46, 125, 79, 0.45);
+    }
+    .floating-whatsapp svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+  </style>
+</head>
+<body>
+<!-- 1. Barra de Confianza -->
+<div class="trust-bar">
+<span>
+<svg fill="none" height="15" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24" width="15"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      Plata ley 925 certificada
+    </span>
+<span class="sep">·</span>
+<span>
+<svg fill="none" height="15" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24" width="15"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+      Joyas con garantía escrita
+    </span>
+<span class="sep">·</span>
+<span>
+<svg fill="none" height="15" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24" width="15"><rect height="13" width="15" x="1" y="3"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+      Despacho a todo Chile con seguimiento
+    </span>
+</div>
+<!-- 2. Navbar -->
+<header class="navbar">
+<div class="navbar-container">
+<a aria-label="Inicio Joyas Kofran" class="brand-logo" href="#">
+<svg viewbox="0 0 24 24">
+<polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+<polyline points="2 17 12 22 22 17"></polyline>
+<polyline points="2 12 12 17 22 12"></polyline>
+</svg>
+<span class="brand-name">Joyas Kofran</span>
+</a>
+<nav>
+<ul class="nav-links">
+<li><a class="nav-link active" href="#">Tienda</a></li>
+<li><a class="nav-link" href="#">Blog</a></li>
+<li><a class="nav-link" href="#">Contacto</a></li>
+</ul>
+</nav>
+<div class="navbar-actions">
+<div class="nav-search">
+<svg fill="none" viewbox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+<input placeholder="Busca anillos, cadenas, aros…" type="text" value="Cadenas de plata"/>
+</div>
+<a aria-label="Ver carrito" class="cart-btn" href="#">
+<svg viewbox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" x2="21" y1="6" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+<span class="cart-badge">0</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Main Content Wrapper -->
+<main class="main-container">
+<!-- Encabezado de Tienda y Buscador Central -->
+<div class="page-header">
+<div class="header-top">
+<div>
+<h1 class="page-title">Tienda</h1>
+<p class="page-subtitle">Joyería fina en legítima plata ley 925 con sello garantizado y despacho rápido a todo Chile.</p>
+</div>
+<div class="search-wrapper-center">
+<svg fill="none" viewbox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+<input placeholder="Busca anillos, cadenas, aros…" type="text"/>
+</div>
+</div>
+</div>
+<!-- 3. Fila de Chip-Filter y Selector de Orden -->
+<div class="filters-nav-row">
+<div class="chip-group">
+<button class="chip-filter" type="button">Todas</button>
+<button class="chip-filter" type="button">Anillos</button>
+<button class="chip-filter active" type="button">Cadenas y collares</button>
+<button class="chip-filter" type="button">Aros</button>
+<button class="chip-filter" type="button">Pulseras</button>
+<button class="chip-filter" type="button">Dijes</button>
+</div>
+<div class="sort-container">
+<span class="sort-label">Ordenar:</span>
+<select aria-label="Ordenar productos" class="sort-select">
+<option selected="">Más vendidos</option>
+<option>Precio: menor a mayor</option>
+<option>Precio: mayor a menor</option>
+<option>Novedades</option>
+</select>
+</div>
+</div>
+<!-- Catálogo: Sidebar de 240px + Grilla de 3 columnas -->
+<div class="catalog-layout">
+<!-- 4. Columna Lateral de Filtros (240px) -->
+<aside aria-label="Filtros del catálogo" class="filter-sidebar">
+<!-- Filtro: Precio -->
+<div class="filter-section">
+<div class="filter-title">
+<span>Precio</span>
+<button class="filter-clear-btn" type="button">Limpiar</button>
+</div>
+<ul class="filter-list">
+<li class="filter-item">
+<label>
+<input name="precio_filter" type="radio"/>
+<span>Hasta $20.000</span>
+<span class="count">(4)</span>
+</label>
+</li>
+<li class="filter-item active-tag">
+<label>
+<input checked="" name="precio_filter" type="radio"/>
+<span>$20.000 – $40.000</span>
+<span class="count">(18)</span>
+</label>
+</li>
+<li class="filter-item">
+<label>
+<input name="precio_filter" type="radio"/>
+<span>$40.000 – $60.000</span>
+<span class="count">(9)</span>
+</label>
+</li>
+<li class="filter-item">
+<label>
+<input name="precio_filter" type="radio"/>
+<span>Más de $60.000</span>
+<span class="count">(3)</span>
+</label>
+</li>
+</ul>
+</div>
+<!-- Filtro: Ocasión -->
+<div class="filter-section">
+<div class="filter-title">
+<span>Ocasión</span>
+</div>
+<ul class="filter-list">
+<li class="filter-item">
+<label>
+<input name="ocasion_filter" type="checkbox"/>
+<span>Para mí</span>
+<span class="count">(14)</span>
+</label>
+</li>
+<li class="filter-item active-tag">
+<label>
+<input checked="" name="ocasion_filter" type="checkbox"/>
+<span>Para regalar</span>
+<span class="count">(12)</span>
+</label>
+</li>
+<li class="filter-item">
+<label>
+<input name="ocasion_filter" type="checkbox"/>
+<span>Ocasiones especiales</span>
+<span class="count">(6)</span>
+</label>
+</li>
+</ul>
+</div>
+<!-- Filtro: Largo -->
+<div class="filter-section">
+<div class="filter-title">
+<span>Largo de cadena</span>
+</div>
+<ul class="filter-list">
+<li class="filter-item">
+<label>
+<input name="largo_filter" type="checkbox"/>
+<span>40 cm (Gargantilla)</span>
+<span class="count">(5)</span>
+</label>
+</li>
+<li class="filter-item">
+<label>
+<input checked="" name="largo_filter" type="checkbox"/>
+<span>45 cm (Estándar)</span>
+<span class="count">(11)</span>
+</label>
+</li>
+<li class="filter-item">
+<label>
+<input name="largo_filter" type="checkbox"/>
+<span>50 cm (Largo medio)</span>
+<span class="count">(8)</span>
+</label>
+</li>
+</ul>
+</div>
+</aside>
+<!-- 5. Grilla de Productos y Paginación -->
+<section aria-label="Listado de joyas disponibles" class="catalog-main">
+<!-- Barra de retroalimentación de filtros activos -->
+<div class="active-feedback-bar">
+<div class="results-count">
+            Mostrando <strong>6</strong> de <strong>18 piezas</strong> en Cadenas y collares
+          </div>
+<div class="applied-tags">
+<span class="pill-applied">
+              $20.000–$40.000
+              <svg fill="none" stroke-width="2.5" viewbox="0 0 24 24"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+</span>
+<span class="pill-applied">
+              Para regalar
+              <svg fill="none" stroke-width="2.5" viewbox="0 0 24 24"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+</span>
+</div>
+</div>
+<!-- Grilla de 3 columnas con 6 card-product -->
+<div class="products-grid">
+<!-- Card 1: Cadena veneciana 45 cm -->
+<article class="card-product">
+<div class="card-image-box">
+<span class="tag-925">Plata 925</span>
+<img alt="Cadena veneciana en plata ley 925 sobre fondo blanco" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<span class="tag-metal">Sello 925</span>
+</div>
+<div class="card-info">
+<span class="piece-type">Cadena en plata ley 925</span>
+<h2 class="card-title">Cadena veneciana 45 cm</h2>
+<div class="card-price-row">
+<span class="price">$24.990</span>
+<span class="guarantee-micro">
+<svg fill="none" height="13" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="13"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Garantía 6 meses
+                </span>
+</div>
+<button class="btn-secondary" type="button">
+                Ver producto
+                <svg fill="none" height="15" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="15"><polyline points="9 18 15 12 9 6"></polyline></svg>
+</button>
+</div>
+</article>
+<!-- Card 2: Cadena rolo 50 cm (etiqueta "Nuevo") -->
+<article class="card-product">
+<div class="card-image-box">
+<span class="tag-925">Nuevo</span>
+<img alt="Cadena rolo eslabón fino plata 925" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<span class="tag-metal">Sello 925</span>
+</div>
+<div class="card-info">
+<span class="piece-type">Cadena en plata ley 925</span>
+<h2 class="card-title">Cadena rolo 50 cm</h2>
+<div class="card-price-row">
+<span class="price">$32.990</span>
+<span class="guarantee-micro">
+<svg fill="none" height="13" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="13"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Garantía 6 meses
+                </span>
+</div>
+<button class="btn-secondary" type="button">
+                Ver producto
+                <svg fill="none" height="15" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="15"><polyline points="9 18 15 12 9 6"></polyline></svg>
+</button>
+</div>
+</article>
+<!-- Card 3: Collar con dije luna (etiqueta "Para regalar") -->
+<article class="card-product">
+<div class="card-image-box">
+<span class="tag-925">Para regalar</span>
+<img alt="Collar con dije luna delicada en plata 925" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<span class="tag-metal">Sello 925</span>
+</div>
+<div class="card-info">
+<span class="piece-type">Collar con dije en plata ley 925</span>
+<h2 class="card-title">Collar con dije luna</h2>
+<div class="card-price-row">
+<span class="price">$27.990</span>
+<span class="guarantee-micro">
+<svg fill="none" height="13" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="13"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Estuche de regalo
+                </span>
+</div>
+<button class="btn-secondary" type="button">
+                Ver producto
+                <svg fill="none" height="15" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="15"><polyline points="9 18 15 12 9 6"></polyline></svg>
+</button>
+</div>
+</article>
+<!-- Card 4: Cadena cartier 40 cm -->
+<article class="card-product">
+<div class="card-image-box">
+<span class="tag-925">Plata 925</span>
+<img alt="Cadena cartier 3x1 plata 925 brillante" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<span class="tag-metal">Sello 925</span>
+</div>
+<div class="card-info">
+<span class="piece-type">Cadena en plata ley 925</span>
+<h2 class="card-title">Cadena cartier 40 cm</h2>
+<div class="card-price-row">
+<span class="price">$29.990</span>
+<span class="guarantee-micro">
+<svg fill="none" height="13" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="13"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Garantía 6 meses
+                </span>
+</div>
+<button class="btn-secondary" type="button">
+                Ver producto
+                <svg fill="none" height="15" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="15"><polyline points="9 18 15 12 9 6"></polyline></svg>
+</button>
+</div>
+</article>
+<!-- Card 5: Collar perla de río -->
+<article class="card-product">
+<div class="card-image-box">
+<span class="tag-925">Plata 925</span>
+<img alt="Collar perla natural y cadena fina de plata 925" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<span class="tag-metal">Sello 925</span>
+</div>
+<div class="card-info">
+<span class="piece-type">Collar con perla y plata ley 925</span>
+<h2 class="card-title">Collar perla de río</h2>
+<div class="card-price-row">
+<span class="price">$34.990</span>
+<span class="guarantee-micro">
+<svg fill="none" height="13" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="13"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Garantía 6 meses
+                </span>
+</div>
+<button class="btn-secondary" type="button">
+                Ver producto
+                <svg fill="none" height="15" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="15"><polyline points="9 18 15 12 9 6"></polyline></svg>
+</button>
+</div>
+</article>
+<!-- Card 6: Cadena singapur 45 cm en estado card-product-disabled ("Agotado") -->
+<article class="card-product card-product-disabled">
+<div class="card-image-box">
+<span class="tag-925">Agotado</span>
+<span class="badge-agotado">Agotado temporalmente</span>
+<img alt="Cadena singapur plata ley 925 agotada" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<span class="tag-metal">Sello 925</span>
+</div>
+<div class="card-info">
+<span class="piece-type">Cadena en plata ley 925</span>
+<h2 class="card-title">Cadena singapur 45 cm</h2>
+<div class="card-price-row">
+<span class="price">$26.990</span>
+<span class="guarantee-micro" style="color: var(--on-surface-variant);">
+                  Sin stock disponible
+                </span>
+</div>
+<button aria-disabled="true" class="btn-secondary" disabled="" type="button">
+                Producto agotado
+              </button>
+</div>
+</article>
+</div>
+<!-- 6. Paginación "1 2 3" -->
+<nav aria-label="Navegación de páginas del catálogo" class="pagination-container">
+<button aria-current="page" class="page-btn active" type="button">1</button>
+<button class="page-btn" type="button">2</button>
+<button class="page-btn" type="button">3</button>
+</nav>
+</section>
+</div>
+</main>
+<!-- 7. Footer -->
+<footer class="footer">
+<div class="footer-inner">
+<div class="footer-col">
+<div class="brand-logo" style="margin-bottom: 14px;">
+<svg style="stroke: #FFFFFF; fill: none; width: 24px; height: 24px;" viewbox="0 0 24 24">
+<polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+<polyline points="2 17 12 22 22 17"></polyline>
+<polyline points="2 12 12 17 22 12"></polyline>
+</svg>
+<span class="brand-name" style="font-size: 22px;">Joyas Kofran</span>
+</div>
+<p>Especialistas en joyería fina de plata ley 925 en Chile. Diseños atemporales con punzón visible, garantía escrita y atención directa para elegir tu joya ideal.</p>
+<div class="whatsapp-badge-box">
+<svg viewbox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"></path></svg>
+<span>Atención: +56 9 XXXX XXXX</span>
+</div>
+</div>
+<div class="footer-col">
+<h4>Navegación</h4>
+<ul>
+<li><a href="#">Tienda</a></li>
+<li><a href="#">Blog</a></li>
+<li><a href="#">Contacto</a></li>
+<li><a href="#">Preguntas frecuentes</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Servicio y Garantía</h4>
+<ul>
+<li><a href="#">Garantía y autenticidad</a></li>
+<li><a href="#">Guía de tallas</a></li>
+<li><a href="#">Despacho y cambios</a></li>
+<li><a href="#">Términos y condiciones</a></li>
+<li><a href="#">Política de privacidad</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Medios de Pago Seguros</h4>
+<p>Tu compra está 100% protegida con confirmación y boleta electrónica al instante.</p>
+<div class="payment-tags">
+<span class="payment-badge">Webpay Plus</span>
+<span class="payment-badge">Redcompra</span>
+<span class="payment-badge">Transferencia</span>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2025 Joyas Kofran. Joyería en plata ley 925 certificada. Todos los derechos reservados.</span>
+<span>🇨🇱 Envíos a todo Chile con número de seguimiento</span>
+</div>
+</footer>
+<!-- Botón Flotante de WhatsApp -->
+<a aria-label="Consultar por WhatsApp" class="floating-whatsapp" href="https://wa.me/569XXXXXXXX" rel="noopener noreferrer" target="_blank">
+<svg viewbox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"></path></svg>
+<span>Consultar por WhatsApp</span>
+</a>
+</body>
+</html>
